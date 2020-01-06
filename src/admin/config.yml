@@ -1,11 +1,20 @@
 backend:
   name: github
-  repo: your_name/repo_name
+  repo: tuelsch/esra-wedding
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "pages"
+    label: "Seiten"
+    files: 
+      - label: "Home"
+        name: "home"
+        file: "src/admin/content/home.yml"
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
   - name: "posts"
     label: "Posts"
     folder: "posts"
