@@ -18,9 +18,9 @@
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="test">
-      <input type="text" id="fav_song">
+      <input name="fav_song" type="text" id="fav_song">
       <label for="vegetarian">
-        <input type="checkbox" id="vegetarian">
+        <input name="vegetarian" type="checkbox" id="vegetarian">
         Vegetarian
       </label>
       <button type="submit">Submit</button>
