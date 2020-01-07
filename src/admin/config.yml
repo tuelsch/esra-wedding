@@ -3,7 +3,7 @@ backend:
   repo: tuelsch/esra-wedding
 
 media_folder: "static/uploads"
-public_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "pages"
@@ -14,4 +14,5 @@ collections:
         file: "src/admin/content/home.yml"
         fields: 
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: Datum, name: date, widget: date, format: DD.MM.YYYY}
+          - {label: Hintergrundbild, name: background, widget: image, allow_multiple: false}
