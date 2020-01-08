@@ -18,3 +18,10 @@ collections:
           - {label: Hintergrundbild, name: background, widget: image, allow_multiple: false}
           - {label: Apéro Passwort, name: apero_pw, widget: string}
           - {label: Fest Passwort, name: fest_pw, widget: string}
+  - name: gallery
+    label: Galerie
+    folder: src/admin/content/gallery
+    create: true
+    fields:
+      - {label: Name, name: name, widget: string}
+      - {label: Bilder, name: images, widget: image, allow_multiple: true}
