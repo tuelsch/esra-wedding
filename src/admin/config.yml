@@ -16,3 +16,5 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Datum, name: date, widget: date, format: DD.MM.YYYY}
           - {label: Hintergrundbild, name: background, widget: image, allow_multiple: false}
+          - {label: Apéro Passwort, name: apero_pw, widget: string}
+          - {label: Fest Passwort, name: fest_pw, widget: string}

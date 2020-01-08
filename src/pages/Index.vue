@@ -13,16 +13,15 @@
 
     <form
       name="test"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      @submit.prevent="checkPW"
+      :class="{error: error}"
     >
-      <input type="hidden" name="form-name" value="test">
-      <input name="fav_song" type="text" id="fav_song">
-      <label for="vegetarian">
-        <input name="vegetarian" type="checkbox" id="vegetarian">
-        Vegetarian
-      </label>
+      <input
+        id="pw"
+        name="pw"
+        type="text"
+        v-model="pw"
+      >
       <button type="submit">Submit</button>
     </form>
 
@@ -32,8 +31,32 @@
 <script>
 import Home from '@/admin/content/home.yml';
 export default {
+  name: 'Index',
+  data() {
+    return {
+      pw: '',
+      error: false,
+    }
+  },
   computed: {
     Home: () => Home,
+  },
+  methods: {
+    checkPW() {
+      this.error = false;
+      if (this.pw === Home.apero_pw) {
+        localStorage.setItem('pw', 'apero');
+      } else if (this.pw === Home.fest_pw) {
+        localStorage.setItem('pw', 'fest');
+      } else {
+        localStorage.setItem('pw', null);
+        this.error = true;
+      }
+
+      if (!this.error) {
+        this.$router.push('/About');
+      }
+    }
   },
   metaInfo: {
     title: 'Hello, world!'
@@ -71,9 +94,5 @@ export default {
 
   .header {
     text-align: center;
-  }
-
-  .header h1 {
-    font-size: 64px;
   }
 </style>

@@ -12,14 +12,25 @@ query {
 }
 </static-query>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Poiret+One&display=swap');
+<style lang="scss">
+@import 'src/styles/mediaqueries';
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,700|Great+Vibes&display=swap');
 
 body {
   margin:0;
   padding:0;
   line-height: 1.5;
-  font-family: 'Poiret One', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Comfortaa', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+
+  @include max($sm) {
+    font-size: 24px;
+  }
+
+  @include min($sm) {
+    font-size: 18px;
+  }
 }
 
 input,
@@ -35,17 +46,5 @@ h5, .h5,
 h6, .h6 {
   font-family: 'Great Vibes', 'Helvetica Neue', sans-serif;
   font-weight: normal;
-}
-
-@media (max-width: 1024px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 24px;
-  }
 }
 </style>
