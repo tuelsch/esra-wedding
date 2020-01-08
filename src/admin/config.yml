@@ -22,6 +22,8 @@ collections:
     label: Galerie
     folder: src/admin/content/gallery
     create: true
+    slug: "{{slug}}"
+    extension: yml
     fields:
-      - {label: Name, name: name, widget: string}
+      - {label: Name, name: title, widget: string}
       - {label: Bilder, name: images, widget: image, allow_multiple: true}
