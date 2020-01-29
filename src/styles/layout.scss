@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,700|Great+Vibes&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  @include max($xs) {
+    &.navigation-open {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin: 1em auto;
+  justify-content: space-between;
+
+  &.align-right {
+    justify-content: flex-end;
+  }
+
+  &.align-center {
+    justify-content: center;
+  }
+}

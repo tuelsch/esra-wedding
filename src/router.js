@@ -1,11 +1,10 @@
-export default function (router, isClient) {
+export default function(router, isClient, store) {
   if (!isClient) return;
-  router.beforeEach((to, from , next) => {
-    const pw = localStorage.getItem('pw');
-    if (pw === null && to.path !== '/') {
-      next('/');
+  router.beforeEach((to, from, next) => {
+    if (store.state.mode === null && to.path !== "/") {
+      next("/");
     } else {
       next();
     }
-  })
+  });
 }

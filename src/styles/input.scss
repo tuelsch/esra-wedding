@@ -1,0 +1,118 @@
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  transition: border 0.2s;
+  padding: 0 0 0.2em 0;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: dodgerblue;
+  }
+
+  .error & {
+    border-bottom-color: crimson;
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid black;
+  padding: 0.5em;
+  font: inherit;
+
+  &[placeholder] + label {
+    left: 0.5em;
+    top: 0.5em;
+  }
+
+  &[placeholder]:not(:placeholder-shown) + label {
+    transform: translateY(-140%) scale(0.7);
+  }
+}
+
+button {
+  background: none;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  font-weight: 700;
+
+  &[disabled] {
+    opacity: 0.6;
+  }
+
+  &.blank {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &.fancy {
+    border-color: white;
+    color: white;
+    background-image: url(/fleck-button.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 6em 10em 8em 12em;
+    filter: grayscale(1);
+    will-change: filter;
+    transition: filter 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+
+    &[disabled] {
+      filter: grayscale(1);
+      cursor: default;
+    }
+  }
+}
+
+.input {
+  position: relative;
+  margin-top: 2em;
+  width: 100%;
+
+  & + .input {
+    margin-left: 2em;
+  }
+
+  &.error {
+    border-color: crimson;
+  }
+}
+
+[placeholder] {
+  &::placeholder {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  & + label {
+    position: absolute;
+    color: slategray;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: transform 0.35s;
+    transform-origin: left bottom;
+    transform: translateY(0) scale(1);
+  }
+
+  /* &:not(.placeholder-shown) + label {
+    transform: translateY(-100%) scale(0.7);
+  } */
+
+  &:not(:placeholder-shown) + label {
+    transform: translateY(-100%) scale(0.7);
+  }
+}

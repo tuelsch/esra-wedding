@@ -1,0 +1,70 @@
+$ratio: 1.25;
+
+body {
+  line-height: 1.5;
+  font-family: "Comfortaa", "Segoe UI", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+
+  @include min($xs) {
+    --base: 20px;
+    font-size: var(--base);
+  }
+
+  @include max($xs) {
+    --base: 16px;
+    font-size: var(--base);
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  display: block;
+  margin: 1em auto;
+  font-family: "Great Vibes", "Georgia", serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1,
+.h1 {
+  font-size: calc(var(--base) * #{$ratio} * 3);
+}
+h2,
+.h2 {
+  font-size: calc(var(--base) * #{$ratio} * 2.5);
+}
+h3,
+.h3 {
+  font-size: calc(var(--base) * #{$ratio} * 2);
+}
+h4,
+.h4 {
+  font-size: calc(var(--base) * #{$ratio} * 1.5);
+}
+h5,
+.h5 {
+  font-size: calc(var(--base) * #{$ratio} * 1);
+}
+h6,
+.h6 {
+  font-size: var(--base);
+}
+
+a {
+  color: inherit;
+}
+
+p.error {
+  color: crimson;
+  font-size: 0.9em;
+}
