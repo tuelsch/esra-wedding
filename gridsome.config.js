@@ -14,8 +14,7 @@ module.exports = {
       plugins: [
         // ...global plugins
       ]
-    },
-    yaml: {}
+    }
   },
   plugins: [
     {
@@ -32,7 +31,9 @@ module.exports = {
       options: {
         path: "src/admin/content/**/*.md",
         typeName: "netlifyPages",
-        remark: {}
+        remark: {
+          plugins: ["remark-html"]
+        }
       }
     }
   ]
