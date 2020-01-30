@@ -1,6 +1,6 @@
 <template>
   <div class="thx">
-    <h3>Anmeldung erfolgreich!</h3>
+    <h3>Anmeldung erfolgreich!!</h3>
     <p>Vielen Dank für deine Anmeldung, sie wurde erfolgreich gespeichert.</p>
     <p>
       <button @click="showRsvp">Zusätzliche Anmeldung ausfüllen</button>
