@@ -1,6 +1,5 @@
 <template>
   <section class="about container">
-    <h2>Anmeldung</h2>
     <rsvp-apero v-if="!rsvpSent && mode === 'apero'" />
     <rsvp-fest v-if="!rsvpSent && mode === 'fest'" />
     <thx-for-rsvp v-if="rsvpSent" />
