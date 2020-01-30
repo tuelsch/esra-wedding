@@ -66,8 +66,8 @@ export default {
       database: null
     };
   },
-  mounted() {
-    const firebase = import("@/firebase");
+  async mounted() {
+    const { default: firebase } = await import("@/firebase");
     this.database = firebase.database();
   },
   validations: {
