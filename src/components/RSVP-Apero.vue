@@ -81,13 +81,13 @@
   </div>
 </template>
 
-<static-query>
+<!--static-query>
   query {
     rsvp:netlifyPages(path:"/src/admin/content/rsvp") {
       apero_rsvp_intro
     }
   }
-</static-query>
+</static-query-->
 
 <script>
 import { validationMixin } from "vuelidate";
