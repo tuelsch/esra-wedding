@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Anmeldung fürs Apéro am 20. Juni 2020 im Würzbrunnen Kilchli</p>
+    <p v-html="$static.rsvp.apero_rsvp_intro"></p>
     <div class="row">
       <div class="input" :class="{ error: !$v.firstname.required && $v.firstname.$dirty }">
         <input
@@ -80,6 +80,14 @@
     </div>
   </div>
 </template>
+
+<static-query>
+  query {
+    rsvp:netlifyPages(path:"/src/admin/content/rsvp") {
+      apero_rsvp_intro
+    }
+  }
+</static-query>
 
 <script>
 import { validationMixin } from "vuelidate";
