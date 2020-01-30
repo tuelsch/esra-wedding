@@ -30,9 +30,9 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "src/admin/content/**/*.yml",
+        path: "src/admin/content/**/*.md",
         typeName: "netlifyPages",
-        yaml: {}
+        remark: {}
       }
     }
   ]
