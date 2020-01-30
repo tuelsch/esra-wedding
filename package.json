@@ -9,6 +9,7 @@
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/transformer-yaml": "^0.2.1",
     "dart-sass": "^1.24.3",
     "firebase": "^7.7.0",
     "gridsome": "^0.7.0",
