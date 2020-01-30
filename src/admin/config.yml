@@ -39,11 +39,6 @@ collections:
               widget: markdown,
             }
           - {
-              label: Titel - Danke fürs ausfüllen,
-              name: rsvp_sent_title,
-              widget: string,
-            }
-          - {
               label: Text - Danke fürs ausfüllen,
               name: rsvp_sent_text,
               widget: markdown,
