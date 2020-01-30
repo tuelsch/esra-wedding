@@ -62,10 +62,8 @@ export default {
   }
 
   @include max($xs) {
-    & > * {
-      position: relative;
-      z-index: 1;
-    }
+    position: relative;
+    z-index: 1;
   }
 
   p {
@@ -143,6 +141,10 @@ export default {
   background: white;
   width: 33px;
   transition: width 0.3s 0.2s;
+
+  &:focus {
+    outline: none;
+  }
 
   @include min($xs) {
     display: none;

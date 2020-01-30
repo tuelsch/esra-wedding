@@ -1,7 +1,8 @@
 <template>
-  <section class="about">
+  <section class="about container">
     <h2>Anmeldung</h2>
     <rsvp-apero v-if="!rsvpSent && mode === 'apero'" />
+    <rsvp-fest v-if="!rsvpSent && mode === 'fest'" />
     <thx-for-rsvp v-if="rsvpSent" />
   </section>
 </template>
@@ -9,12 +10,14 @@
 <script>
 import RsvpApero from "@/components/RSVP-Apero";
 import ThxForRsvp from "@/components/ThxForRsvp";
+import RsvpFest from "@/components/RSVP-Fest";
 import { mapState } from "vuex";
 
 export default {
   components: {
     RsvpApero,
-    ThxForRsvp
+    ThxForRsvp,
+    RsvpFest
   },
   computed: {
     ...mapState(["rsvpSent", "mode"])
