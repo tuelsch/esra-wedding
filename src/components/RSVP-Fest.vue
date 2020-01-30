@@ -1,6 +1,6 @@
 <template>
   <div class="rsvp-fest">
-    <p>TODO: CMS Anmeldung Fest</p>
+    <div v-html="$static.rsvp.content"></div>
     <ul class="persons-list">
       <li v-for="(person, index) in persons" :key="index">
         <fest-person-form
@@ -37,6 +37,14 @@
     </div>
   </div>
 </template>
+
+<static-query>
+  query {
+    rsvp:netlifyPages(path:"/src/admin/content/rsvp-fest") {
+      content
+    }
+  }
+</static-query>
 
 <script>
 import { validationMixin } from "vuelidate";

@@ -2,10 +2,7 @@
   <div>
     <p v-html="$static.rsvp.content"></p>
     <div class="row">
-      <div
-        class="input"
-        :class="{ error: !$v.firstname.required && $v.firstname.$dirty }"
-      >
+      <div class="input" :class="{ error: !$v.firstname.required && $v.firstname.$dirty }">
         <input
           type="text"
           id="apero-firstname"
@@ -14,14 +11,12 @@
           v-model="firstname"
         />
         <label for="apero-firstname">Vorname</label>
-        <p class="error" v-if="!$v.firstname.required && $v.firstname.$dirty">
-          Bitte gib deinen Vornamen ein.
-        </p>
+        <p
+          class="error"
+          v-if="!$v.firstname.required && $v.firstname.$dirty"
+        >Bitte gib deinen Vornamen ein.</p>
       </div>
-      <div
-        class="input"
-        :class="{ error: !$v.lastname.required && $v.lastname.$dirty }"
-      >
+      <div class="input" :class="{ error: !$v.lastname.required && $v.lastname.$dirty }">
         <input
           type="text"
           id="apero-lastname"
@@ -30,16 +25,14 @@
           v-model="lastname"
         />
         <label for="apero-lastname">Name</label>
-        <p class="error" v-if="!$v.lastname.required && $v.lastname.$dirty">
-          Bitte gib deinen Nachnamen ein.
-        </p>
+        <p
+          class="error"
+          v-if="!$v.lastname.required && $v.lastname.$dirty"
+        >Bitte gib deinen Nachnamen ein.</p>
       </div>
     </div>
     <div class="row">
-      <div
-        class="input"
-        :class="{ error: !$v.adults.required && $v.adults.$dirty }"
-      >
+      <div class="input" :class="{ error: !$v.adults.required && $v.adults.$dirty }">
         <input
           type="number"
           min="0"
@@ -49,14 +42,12 @@
           v-model="adults"
         />
         <label for="apero-adults">Anzahl Erwachsene</label>
-        <p class="error" v-if="!$v.adults.required && $v.adults.$dirty">
-          Bitte gib die Anzahl Erwachsene ein.
-        </p>
+        <p
+          class="error"
+          v-if="!$v.adults.required && $v.adults.$dirty"
+        >Bitte gib die Anzahl Erwachsene ein.</p>
       </div>
-      <div
-        class="input"
-        :class="{ error: !$v.children.required && $v.children.$dirty }"
-      >
+      <div class="input" :class="{ error: !$v.children.required && $v.children.$dirty }">
         <input
           type="number"
           min="0"
@@ -66,9 +57,10 @@
           v-model="children"
         />
         <label for="apero-children">Anzahl Kinder</label>
-        <p class="error" v-if="!$v.children.required && $v.children.$dirty">
-          Bitte gib die Anzahl Kinder ein.
-        </p>
+        <p
+          class="error"
+          v-if="!$v.children.required && $v.children.$dirty"
+        >Bitte gib die Anzahl Kinder ein.</p>
       </div>
     </div>
     <div class="row">
@@ -84,20 +76,23 @@
       </div>
     </div>
     <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="checkForm">
-        Senden
-      </button>
+      <button class="fancy" :disabled="rsvpSent || sending" @click="checkForm">Senden</button>
     </div>
   </div>
 </template>
 
-<static-query>
+<!-- static-query>
   query {
     rsvp:netlifyPages(path:"/src/admin/content/rsvp-apero") {
+      firstname,
+      lastname,
+      adults,
+      children,
+      comments,
       content
     }
   }
-</static-query>
+</static-query -->
 
 <script>
 import { validationMixin } from "vuelidate";
