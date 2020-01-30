@@ -14,7 +14,7 @@ collections:
         file: src/admin/content/home.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Datum, name: date, widget: date, format: DD. MMMM YYYY }
+          - { label: Datum, name: date, widget: string }
           - { label: Code Platzhalter, name: code, widget: string }
           - {
               label: Hintergrundbild,
