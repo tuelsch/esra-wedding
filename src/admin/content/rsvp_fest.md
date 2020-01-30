@@ -10,7 +10,7 @@ fest_error: Nimmst du am Abendessen teil?
 night: Übernachtung mit Morgenessen
 night_error: Möchtest du im Hirschen Übernachten?
 comments: 'Bemerkungen, Allergien, Vegetarisch, etc.'
-add_person: Zusätzliche Gäste hinzufügen
+add_person: Gast hinzufügen
 ---
 ## Anmeldung Abendessen
 
