@@ -15,6 +15,7 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Datum, name: date, widget: date, format: DD. MMMM YYYY }
+          - { label: Code Platzhalter, name: code, widget: string }
           - {
               label: Hintergrundbild,
               name: background,
@@ -27,6 +28,7 @@ collections:
         name: "rsvp"
         file: "src/admin/content/rsvp_apero.md"
         fields:
+          - { label: Apero Anmeldung Intro, name: body, widget: markdown }
           - { label: Vorname, name: firstname, widget: string }
           - { label: Vorname Fehler, name: firstname_error, widget: string }
           - { label: Nachname, name: lastname, widget: string }
@@ -36,11 +38,11 @@ collections:
           - { label: Kinder, name: children, widget: string }
           - { label: Kinder Fehler, name: children_error, widget: string }
           - { label: Bemerkungen, name: comments, widget: string }
-          - { label: Apero Anmeldung Intro, name: body, widget: markdown }
       - label: "Anmeldung Fest"
         name: "rsvp_fest"
         file: src/admin/content/rsvp_fest.md
         fields:
+          - { label: Fest Anmeldung Intro, name: body, widget: markdown }
           - { label: Vorname, name: firstname, widget: string }
           - { label: Vorname Fehler, name: firstname_error, widget: string }
           - { label: Nachname, name: lastname, widget: string }
@@ -53,7 +55,6 @@ collections:
           - { label: Übernachtung Fehler, name: night_error, widget: string }
           - { label: Bemerkungen, name: comments, widget: string }
           - { label: Gast hinzufügen, name: add_person, widget: string }
-          - { label: Fest Anmeldung Intro, name: body, widget: markdown }
       - label: "Anmeldung Bestätigung und Danke"
         name: "rsvp_thx"
         file: src/admin/content/rsvp_thx.md
