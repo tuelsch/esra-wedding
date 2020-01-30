@@ -28,9 +28,13 @@ collections:
         file: "src/admin/content/rsvp_apero.md"
         fields:
           - { label: Vorname, name: firstname, widget: string }
+          - { label: Vorname Fehler, name: firstname_error, widget: string }
           - { label: Nachname, name: lastname, widget: string }
+          - { label: Nachname Fehler, name: lastname_error, widget: string }
           - { label: Erwachsene, name: adults, widget: string }
+          - { label: Erwachsene Fehler, name: adults_error, widget: string }
           - { label: Kinder, name: children, widget: string }
+          - { label: Kinder Fehler, name: children_error, widget: string }
           - { label: Bemerkungen, name: comments, widget: string }
           - { label: Apero Anmeldung Intro, name: body, widget: markdown }
       - label: "Anmeldung Fest"
@@ -38,10 +42,15 @@ collections:
         file: src/admin/content/rsvp_fest.md
         fields:
           - { label: Vorname, name: firstname, widget: string }
+          - { label: Vorname Fehler, name: firstname_error, widget: string }
           - { label: Nachname, name: lastname, widget: string }
+          - { label: Nachname Fehler, name: lastname_error, widget: string }
           - { label: Apéro, name: apero, widget: string }
+          - { label: Apéro Fehler, name: apero_error, widget: string }
           - { label: Abendessen, name: fest, widget: string }
+          - { label: Abendessen Fehler, name: fest_error, widget: string }
           - { label: Übernachtung, name: night, widget: string }
+          - { label: Übernachtung Fehler, name: night_error, widget: string }
           - { label: Bemerkungen, name: comments, widget: string }
           - { label: Gast hinzufügen, name: add_person, widget: string }
           - { label: Fest Anmeldung Intro, name: body, widget: markdown }
