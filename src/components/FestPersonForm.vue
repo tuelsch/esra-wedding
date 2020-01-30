@@ -1,10 +1,7 @@
 <template>
   <div class="fest-person-form">
     <div class="row">
-      <div
-        class="input"
-        :class="{ error: !v.firstname.required && v.firstname.$dirty }"
-      >
+      <div class="input" :class="{ error: !v.firstname.required && v.firstname.$dirty }">
         <input
           type="text"
           id="apero-firstname"
@@ -13,14 +10,12 @@
           v-model="person.firstname"
         />
         <label for="apero-firstname">Vorname</label>
-        <p class="error" v-if="!v.firstname.required && v.firstname.$dirty">
-          Bitte gib einen Vornamen ein.
-        </p>
+        <p
+          class="error"
+          v-if="!v.firstname.required && v.firstname.$dirty"
+        >Bitte gib einen Vornamen ein.</p>
       </div>
-      <div
-        class="input"
-        :class="{ error: !v.lastname.required && v.lastname.$dirty }"
-      >
+      <div class="input" :class="{ error: !v.lastname.required && v.lastname.$dirty }">
         <input
           type="text"
           id="apero-lastname"
@@ -29,17 +24,15 @@
           v-model="person.lastname"
         />
         <label for="apero-lastname">Name</label>
-        <p class="error" v-if="!v.lastname.required && v.lastname.$dirty">
-          Bitte gib einen Nachnamen ein.
-        </p>
+        <p
+          class="error"
+          v-if="!v.lastname.required && v.lastname.$dirty"
+        >Bitte gib einen Nachnamen ein.</p>
       </div>
     </div>
     <div class="row">
       <span>Apéro</span>
-      <div
-        class="radio"
-        :class="{ error: !v.apero.required && v.apero.$dirty }"
-      >
+      <div class="radio" :class="{ error: !v.apero.required && v.apero.$dirty }">
         <input
           type="radio"
           :id="index + 'apero-ja'"
@@ -62,19 +55,11 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.apero.required && v.apero.$dirty">
-      Nimmst du am Apéro teil?
-    </p>
+    <p class="error" v-if="!v.apero.required && v.apero.$dirty">Nimmst du am Apéro teil?</p>
     <div class="row">
       <span>Abendessen (nur Erwachsene)</span>
       <div class="radio" :class="{ error: !v.fest.required && v.fest.$dirty }">
-        <input
-          type="radio"
-          :id="index + 'fest-ja'"
-          name="fest"
-          :value="true"
-          v-model="person.fest"
-        />
+        <input type="radio" :id="index + 'fest-ja'" name="fest" :value="true" v-model="person.fest" />
         <label :for="index + 'fest-ja'">
           <span>Ja</span>
         </label>
@@ -90,15 +75,10 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.fest.required && v.fest.$dirty">
-      Nimmst du am Abendessen teil?
-    </p>
+    <p class="error" v-if="!v.fest.required && v.fest.$dirty">Nimmst du am Abendessen teil?</p>
     <div class="row">
       <span>Übernachtung im Hirschen</span>
-      <div
-        class="radio"
-        :class="{ error: !v.night.required && v.night.$dirty }"
-      >
+      <div class="radio" :class="{ error: !v.night.required && v.night.$dirty }">
         <input
           type="radio"
           :id="index + 'night-ja'"
@@ -121,9 +101,7 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.night.required && v.night.$dirty">
-      Möchtest du im Hirschen Übernachten?
-    </p>
+    <p class="error" v-if="!v.night.required && v.night.$dirty">Möchtest du im Hirschen Übernachten?</p>
     <div class="row">
       <div class="input">
         <textarea
@@ -133,9 +111,7 @@
           placeholder="Bemerkungen, Allergien, Vegetarisch"
           v-model="person.comments"
         ></textarea>
-        <label for="fest-comments">
-          Bemerkungen, Allergien, Vegetarisch, etc.
-        </label>
+        <label for="fest-comments">Bemerkungen, Allergien, Vegetarisch, etc.</label>
       </div>
     </div>
     <div class="row align-right">
@@ -148,10 +124,7 @@
 <script>
 import { validationMixin } from "vuelidate";
 import { required, minValue } from "vuelidate/lib/validators";
-import firebase from "@/firebase";
 import { mapMutations, mapState } from "vuex";
-
-const database = firebase.database();
 
 export default {
   mixins: [validationMixin],

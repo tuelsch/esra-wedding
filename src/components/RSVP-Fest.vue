@@ -13,39 +13,27 @@
         />
         <div class="summary row" v-if="!person.editMode">
           <div>
-            <img class="profile-img" src="/person.png" alt="" />
+            <img class="profile-img" src="/person.png" alt />
             <span>{{ person.firstname }} {{ person.lastname }}</span>
           </div>
           <div>
-            <button class="underlined" @click="editPerson(index)">
-              Bearbeiten
-            </button>
-            <button
-              class="underlined"
-              title="Löschen"
-              @click="deletePerson(index)"
-            >
-              <img src="/bin.png" alt="" />
+            <button class="underlined" @click="editPerson(index)">Bearbeiten</button>
+            <button class="underlined" title="Löschen" @click="deletePerson(index)">
+              <img src="/bin.png" alt />
               <span class="sr-only">Löschen</span>
             </button>
           </div>
         </div>
       </li>
       <li class="add-person">
-        <button
-          class="underlined"
-          @click="addPerson"
-          :disabled="hasEditModePerson"
-        >
-          <img class="profile-img" src="/add-person.png" alt="" />
+        <button class="underlined" @click="addPerson" :disabled="hasEditModePerson">
+          <img class="profile-img" src="/add-person.png" alt />
           <span>Gast hinzufügen</span>
         </button>
       </li>
     </ul>
     <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">
-        Senden
-      </button>
+      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">Senden</button>
     </div>
   </div>
 </template>
@@ -53,11 +41,8 @@
 <script>
 import { validationMixin } from "vuelidate";
 import { required, minLength } from "vuelidate/lib/validators";
-import firebase from "@/firebase";
 import { mapMutations, mapState } from "vuex";
 import FestPersonForm from "@/components/FestPersonForm";
-
-const database = firebase.database();
 
 const defaultPersonData = () => ({
   firstname: "",
@@ -77,8 +62,13 @@ export default {
   data() {
     return {
       persons: [new defaultPersonData()],
-      sending: false
+      sending: false,
+      database: null
     };
+  },
+  mounted() {
+    const firebase = import("@/firebase");
+    this.database = firebase.database();
   },
   validations: {
     persons: {
@@ -130,7 +120,7 @@ export default {
         this.sending = true;
 
         try {
-          await database.ref("fest").push({
+          await this.database.ref("fest").push({
             persons: this.persons,
             created: Date.now()
           });
