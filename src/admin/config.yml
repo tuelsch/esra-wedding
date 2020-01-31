@@ -77,6 +77,12 @@ collections:
         fields:
           - { label: Anfahrt, name: body, widget: markdown }
           - { label: Auf Maps anzeigen, name: show_on_maps, widget: string }
+      - label: Fussnote
+        name: footer
+        file: src/admin/content/footer.md
+        fields:
+          - { label: Impressum, name: body, widget: markdown }
+          - { label: Passwort zurücksetzen, name: reset_pw, widget: string }
 
   - name: gallery
     label: Galerie
@@ -93,4 +99,10 @@ collections:
           default: true,
         }
       - { label: Für Festgäste sichtbar, name: visible_fest, widget: boolean }
-      - { label: Bilder, name: images, widget: image, allow_multiple: true }
+      - {
+        label: Bilder,
+        name: images,
+        widget: list,
+        fields: 
+          - { label: Bild, name: image, widget: image, allow_multiple: false }
+      }
