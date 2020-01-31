@@ -1,4 +1,4 @@
-## Kirchliche Trauung & Apéro
+## Programm
 
 ### Samstag, 20. Juni 2020
 
