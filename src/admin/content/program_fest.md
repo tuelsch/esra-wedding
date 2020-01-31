@@ -1,6 +1,4 @@
-
-
-## Kirchliche Trauung & Apéro
+## Kirchliche Trauung, Apéro und Fest
 
 ### Samstag, 20. Juni 2020
 
