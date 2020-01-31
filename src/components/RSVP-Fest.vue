@@ -11,7 +11,7 @@
           @validPerson="validPerson"
           v-if="person.editMode"
         />
-        <div class="summary row" v-if="!person.editMode">
+        <div class="summary row mobile" v-if="!person.editMode">
           <div>
             <img class="profile-img" src="/person.png" alt />
             <span>{{ person.firstname }} {{ person.lastname }}</span>
@@ -28,7 +28,7 @@
       <li class="add-person">
         <button class="underlined" @click="addPerson" :disabled="hasEditModePerson">
           <img class="profile-img" src="/add-person.png" alt />
-          <span>Gast hinzufügen</span>
+          <span>{{$static.rsvp.add_person}}</span>
         </button>
       </li>
     </ul>
@@ -41,7 +41,8 @@
 <static-query>
   query {
     rsvp:netlifyPages(path:"/src/admin/content/rsvp-fest") {
-      content
+      content,
+      add_person
     }
   }
 </static-query>
@@ -166,6 +167,7 @@ export default {
   & button {
     border: none;
     font-weight: 300;
+    flex-shrink: 0;
 
     img {
       width: 1.4em;
@@ -185,9 +187,9 @@ export default {
   list-style: none;
 
   li {
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     &:first-child {
-      border-top: 1px solid black;
+      border-top: none;
     }
   }
 }

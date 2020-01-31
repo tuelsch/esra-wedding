@@ -1,12 +1,11 @@
 <template>
   <layout>
-    <login v-show="!mode" />
-    <about v-show="mode" />
+    <login v-if="!mode" />
+    <about v-if="mode" />
   </layout>
 </template>
 
 <script>
-import Home from "@/admin/content/home.yml";
 import Login from "@/components/Login";
 import About from "@/components/About";
 import { mapState } from "vuex";
@@ -18,8 +17,7 @@ export default {
     About
   },
   computed: {
-    ...mapState(["mode"]),
-    Home: () => Home
+    ...mapState(["mode"])
   }
 };
 </script>

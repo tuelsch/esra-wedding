@@ -9,11 +9,11 @@
           placeholder="Vorname"
           v-model="person.firstname"
         />
-        <label for="apero-firstname">Vorname</label>
+        <label for="apero-firstname">{{$static.rsvp.firstname}}</label>
         <p
           class="error"
           v-if="!v.firstname.required && v.firstname.$dirty"
-        >Bitte gib einen Vornamen ein.</p>
+        >{{$static.rsvp.firstname_error}}</p>
       </div>
       <div class="input" :class="{ error: !v.lastname.required && v.lastname.$dirty }">
         <input
@@ -23,15 +23,15 @@
           placeholder="Name"
           v-model="person.lastname"
         />
-        <label for="apero-lastname">Name</label>
+        <label for="apero-lastname">{{$static.rsvp.lastname}}</label>
         <p
           class="error"
           v-if="!v.lastname.required && v.lastname.$dirty"
-        >Bitte gib einen Nachnamen ein.</p>
+        >{{$static.rsvp.lastname_error}}</p>
       </div>
     </div>
     <div class="row">
-      <span>Apéro</span>
+      <span>{{$static.rsvp.apero}}</span>
       <div class="radio" :class="{ error: !v.apero.required && v.apero.$dirty }">
         <input
           type="radio"
@@ -55,9 +55,9 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.apero.required && v.apero.$dirty">Nimmst du am Apéro teil?</p>
+    <p class="error" v-if="!v.apero.required && v.apero.$dirty">{{$static.rsvp.apero_error}}</p>
     <div class="row">
-      <span>Abendessen (nur Erwachsene)</span>
+      <span>{{$static.rsvp.fest}}</span>
       <div class="radio" :class="{ error: !v.fest.required && v.fest.$dirty }">
         <input type="radio" :id="index + 'fest-ja'" name="fest" :value="true" v-model="person.fest" />
         <label :for="index + 'fest-ja'">
@@ -75,9 +75,9 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.fest.required && v.fest.$dirty">Nimmst du am Abendessen teil?</p>
+    <p class="error" v-if="!v.fest.required && v.fest.$dirty">{{$static.rsvp.fest_error}}</p>
     <div class="row">
-      <span>Übernachtung im Hirschen</span>
+      <span>{{$static.rsvp.night}}</span>
       <div class="radio" :class="{ error: !v.night.required && v.night.$dirty }">
         <input
           type="radio"
@@ -101,7 +101,7 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.night.required && v.night.$dirty">Möchtest du im Hirschen Übernachten?</p>
+    <p class="error" v-if="!v.night.required && v.night.$dirty">{{$static.rsvp.night_error}}</p>
     <div class="row">
       <div class="input">
         <textarea
@@ -111,7 +111,7 @@
           placeholder="Bemerkungen, Allergien, Vegetarisch"
           v-model="person.comments"
         ></textarea>
-        <label for="fest-comments">Bemerkungen, Allergien, Vegetarisch, etc.</label>
+        <label for="fest-comments">{{$static.rsvp.comments}}</label>
       </div>
     </div>
     <div class="row align-right">
@@ -120,6 +120,24 @@
     </div>
   </div>
 </template>
+
+<static-query>
+  query {
+    rsvp:netlifyPages(path:"/src/admin/content/rsvp-fest") {
+      firstname,
+      firstname_error,
+      lastname,
+      lastname_error,
+      apero,
+      apero_error,
+      fest,
+      fest_error,
+      night,
+      night_error
+      comments,
+    }
+  }
+</static-query>
 
 <script>
 import { validationMixin } from "vuelidate";
@@ -150,5 +168,12 @@ export default {
 <style lang="scss">
 .radio {
   white-space: nowrap;
+}
+
+.fest-person-form {
+  .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 </style>

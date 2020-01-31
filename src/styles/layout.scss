@@ -17,6 +17,16 @@ body {
   }
 }
 
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > main {
+    flex-grow: 1;
+  }
+}
+
 .align-center {
   text-align: center;
 }
@@ -30,9 +40,23 @@ button {
   font: inherit;
 }
 
+img,
+form {
+  max-width: 100%;
+}
+
 .container {
-  padding-right: 1em;
-  padding-left: 1em;
+  width: 100%;
+  @include min($xxs) {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  @include max($xxs) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 .row {
@@ -42,6 +66,19 @@ button {
   @include min($xs) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @include max($xs) {
+    &.mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > *:not(:first-child) {
+        margin-left: 2em;
+      }
+    }
   }
 
   & > *:not(:first-child) {

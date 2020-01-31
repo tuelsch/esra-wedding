@@ -1,38 +1,44 @@
 <template>
-  <div class="login">
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <div class="background">
-      <g-image alt="Hintergrundbild" :src="Home.background" />
-    </div>
-
-    <form
-      name="test"
-      class="pw-form"
-      @submit.prevent="checkPW"
-      :class="{ error: error }"
-    >
+  <main class="login container">
+    <form name="test" class="pw-form" @submit.prevent="checkPW" :class="{ error: error }">
+      <h1>{{$static.login.title}}</h1>
+      <time class="h3">{{$static.login.date}}</time>
       <div class="input">
         <input
           id="pw"
           name="pw"
           type="text"
-          title="Gib hier deinen Code ein"
-          placeholder="Gib hier deinen Code ein"
+          :title="$static.login.code"
+          :placeholder="$static.login.code"
           autocomplete="off"
           v-model="pw"
         />
-        <label class="pw-label" for="pw">Gib hier deinen Code ein</label>
+        <label class="pw-label" for="pw">{{$static.login.code}}</label>
         <button class="submit" type="submit" :class="{ ok: !!pw }">
           <img aria-hidden="true" src="/arrow-right.svg" alt="Pfeil rechts" />
         </button>
       </div>
+      <g-image class="fleck" alt="Hintergrundbild" :src="$static.login.background" />
     </form>
-  </div>
+  </main>
 </template>
 
+<static-query>
+  query {
+    login:netlifyPages(path:"/src/admin/content/home") {
+      apero_pw,
+      fest_pw,
+      background,
+      title,
+      date,
+      code
+    }
+  }
+</static-query>
+
 <script>
-import Home from "@/admin/content/home.yml";
 import { mapMutations, mapState } from "vuex";
+import EMode from "@/modules/EMode";
 
 export default {
   name: "Index",
@@ -43,16 +49,18 @@ export default {
     };
   },
   computed: {
-    ...mapState(["mode"]),
-    Home: () => Home
+    ...mapState(["mode"])
   },
   methods: {
     ...mapMutations(["setMode"]),
     checkPW() {
       this.error = false;
-      this.setMode(this.pw);
-
-      if (!this.mode) {
+      if (this.pw === this.$static.login.apero_pw) {
+        this.setMode(EMode.Apero);
+      } else if (this.pw === this.$static.login.fest_pw) {
+        this.setMode(EMode.Fest);
+      } else {
+        this.setMode(null);
         this.error = true;
       }
     }
@@ -61,22 +69,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.background {
-  display: grid;
-  place-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-}
-
-.background > img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: bottom;
+@import "~/styles/mediaqueries.scss";
+.login {
+  min-height: 100vh;
+  max-width: 40em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit {
@@ -98,11 +98,21 @@ export default {
 }
 
 .pw-form {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  top: 50%;
-  width: 100%;
+  h1 {
+    white-space: nowrap;
+    margin-bottom: 0;
+
+    @include max($xxs) {
+      font-size: calc(var(--base) * 1.25 * 2);
+    }
+  }
+
+  time {
+    margin-top: 0;
+    @include max($xxs) {
+      font-size: calc(var(--base) * 1.25 * 1);
+    }
+  }
 
   input[name="pw"] {
     padding-right: 1.5em;
@@ -143,5 +153,11 @@ export default {
       width: 0;
     }
   }
+}
+
+.fleck {
+  display: block;
+  max-width: 80vw;
+  margin: 2em auto;
 }
 </style>

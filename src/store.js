@@ -1,6 +1,5 @@
 import Vuex from "vuex";
 import VuexPersist from "vuex-persist";
-import Home from "@/admin/content/home.yml";
 
 function createStore(isClient) {
   const settings = {
@@ -9,14 +8,8 @@ function createStore(isClient) {
       rsvpSent: false
     },
     mutations: {
-      setMode(state, pw) {
-        if (pw === Home.apero_pw) {
-          state.mode = "apero";
-        } else if (pw === Home.fest_pw) {
-          state.mode = "fest";
-        } else {
-          state.mode = null;
-        }
+      setMode(state, mode) {
+        state.mode = mode;
       },
       sendRsvp(state, rsvpSent) {
         state.rsvpSent = rsvpSent;

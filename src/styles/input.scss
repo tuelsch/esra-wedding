@@ -24,6 +24,7 @@ textarea {
   padding: 0.5em;
   transition: border 0.2s;
   font: inherit;
+  resize: vertical;
 
   &:focus {
     outline: none;
@@ -47,6 +48,7 @@ button {
   border: 2px solid black;
   padding: 0.5em 1em;
   font-weight: 700;
+  color: inherit;
 
   &[disabled] {
     opacity: 0.6;
@@ -64,6 +66,20 @@ button {
     border-radius: 0;
   }
 
+  &.link {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: dodgerblue;
+    }
+  }
+
   &.underlined {
     &:hover:not([disabled]) {
       cursor: pointer;
@@ -72,7 +88,7 @@ button {
   }
 
   &.fancy {
-    border-color: white;
+    border: none;
     color: white;
     background-image: url(/fleck-button.jpg);
     background-size: contain;
@@ -107,8 +123,11 @@ button {
 
 .input {
   position: relative;
-  margin-top: 2em;
   width: 100%;
+
+  @include max($xs) {
+    margin-top: 2rem;
+  }
 
   &.error {
     border-color: crimson;
@@ -151,6 +170,10 @@ input[type="radio"] {
   opacity: 0;
   position: absolute;
   z-index: -1;
+  height: 0;
+  width: 0;
+  display: block;
+  margin: 0;
 
   & + label {
     &:not(:first-of-type) {
