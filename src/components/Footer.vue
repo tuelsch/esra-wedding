@@ -14,6 +14,7 @@ export default {
     ...mapMutations(["setMode"]),
     resetPW() {
       this.setMode(null);
+      this.$router.push("/");
     }
   }
 };

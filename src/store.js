@@ -1,5 +1,6 @@
 import Vuex from "vuex";
 import VuexPersist from "vuex-persist";
+import EMode from "@/modules/EMode";
 
 function createStore(isClient) {
   const settings = {
@@ -13,6 +14,18 @@ function createStore(isClient) {
       },
       sendRsvp(state, rsvpSent) {
         state.rsvpSent = rsvpSent;
+      }
+    },
+    getters: {
+      getGalleryLinks: state => edges => {
+        const galleries = edges.filter(gallery => {
+          if (gallery.node.visible_apero && state.mode === EMode.Apero)
+            return true;
+          if (gallery.node.visible_fest && state.mode === EMode.Fest)
+            return true;
+          return false;
+        });
+        return galleries;
       }
     },
     plugins: []

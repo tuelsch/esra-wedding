@@ -3,9 +3,43 @@
     <g-link to="/#section-rsvp">Anmeldung</g-link>
     <g-link to="/#section-program">Programm</g-link>
     <g-link to="/#section-map">Anfahrt</g-link>
-    <g-link to="/gallery/">Bilder</g-link>
+    <g-link
+      v-if="$store.getters.getGalleryLinks($static.galleries.edges).length > 0"
+      :to="getFirstGalleryLink"
+    >Bilder</g-link>
   </nav>
 </template>
+
+<static-query>
+query {
+  galleries:allGallery {
+    edges {
+      node {
+        visible_fest,
+        visible_apero,
+        title
+      }
+    }
+  }
+}
+</static-query>
+
+<script>
+import { mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState(["mode"]),
+    getFirstGalleryLink() {
+      const gl = this.$store.getters.getGalleryLinks(
+        this.$static.galleries.edges
+      );
+      if (gl.length === 0) return null;
+      return `/gallery/${gl[0].node.title.toLowerCase()}`;
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 @import "~/styles/mediaqueries.scss";

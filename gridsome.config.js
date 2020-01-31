@@ -16,6 +16,9 @@ module.exports = {
       ]
     }
   },
+  templates: {
+    Gallery: "/gallery/:title"
+  },
   plugins: [
     {
       use: `gridsome-plugin-netlify-cms`,
@@ -29,11 +32,17 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "src/admin/content/**/*.md",
+        path: "src/admin/content/*.md",
         typeName: "netlifyPages",
-        remark: {
-          plugins: ["remark-html"]
-        }
+        remark: {}
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "src/admin/content/gallery/*.md",
+        typeName: "Gallery",
+        remark: {}
       }
     }
   ]
