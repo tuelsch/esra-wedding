@@ -157,7 +157,6 @@ export default {
 
 .fleck {
   display: block;
-  max-width: 80vw;
   margin: 2em auto;
 }
 </style>

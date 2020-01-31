@@ -61,6 +61,16 @@ collections:
         fields:
           - { label: Text - Danke fürs ausfüllen, name: body, widget: markdown }
           - { label: Weitere Anmeldung, name: add_invite, widget: string }
+      - label: Programm Apero
+        name: program_apero
+        file: src/admin/content/program_apero.md
+        fields:
+          - { label: Programm Apero, name: body, widget: markdown }
+      - label: Programm Fest
+        name: program_fest
+        file: src/admin/content/program_fest.md
+        fields:
+          - { label: Programm Fest, name: body, widget: markdown }
 
   - name: gallery
     label: Galerie
@@ -70,6 +80,11 @@ collections:
     extension: md
     fields:
       - { label: Name, name: title, widget: string }
-      - { label: Für Aperogäste sichtbar, name: visible_apero, widget: boolean }
+      - {
+          label: Für Aperogäste sichtbar,
+          name: visible_apero,
+          widget: boolean,
+          default: true,
+        }
       - { label: Für Festgäste sichtbar, name: visible_fest, widget: boolean }
       - { label: Bilder, name: images, widget: image, allow_multiple: true }
