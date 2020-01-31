@@ -1,7 +1,7 @@
 ---
 title: Apero
-visible_apero: false
-visible_fest: false
+visible_apero: true
+visible_fest: true
 images:
   - image: /uploads/home_fleck.jpg
 ---
