@@ -1,9 +1,9 @@
 <template>
-  <main class="about container">
+  <section id="section-rsvp" class="container">
     <rsvp-apero v-if="!rsvpSent && mode === EMode.Apero" />
     <rsvp-fest v-if="!rsvpSent && mode === EMode.Fest" />
     <thx-for-rsvp v-if="rsvpSent" />
-  </main>
+  </section>
 </template>
 
 <script>
@@ -29,5 +29,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss"></style>

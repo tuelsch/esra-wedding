@@ -1,8 +1,8 @@
 <template>
   <nav class="navigation container">
-    <a href>Anmeldung</a>
-    <a href>Programm</a>
-    <a href>Anfahrt</a>
+    <a href="#section-rsvp">Anmeldung</a>
+    <a href="#section-program">Programm</a>
+    <a href="#section-map">Anfahrt</a>
     <a href>Bilder</a>
   </nav>
 </template>

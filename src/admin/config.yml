@@ -71,6 +71,12 @@ collections:
         file: src/admin/content/program_fest.md
         fields:
           - { label: Programm Fest, name: body, widget: markdown }
+      - label: Anfahrt
+        name: map
+        file: src/admin/content/map.md
+        fields:
+          - { label: Anfahrt, name: body, widget: markdown }
+          - { label: Auf Maps anzeigen, name: show_on_maps, widget: string }
 
   - name: gallery
     label: Galerie

@@ -40,6 +40,17 @@ button {
   font: inherit;
 }
 
+section {
+  & + section {
+    margin-top: 6rem;
+  }
+}
+
+iframe {
+  width: 100% !important;
+  max-width: 100%;
+}
+
 img,
 form {
   max-width: 100%;
@@ -49,7 +60,8 @@ form {
   width: 100%;
   @include min($xxs) {
     max-width: 50rem;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 2rem;
     padding-left: 2rem;
   }

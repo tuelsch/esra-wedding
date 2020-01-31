@@ -1,20 +1,26 @@
 <template>
   <layout>
     <login v-if="!mode" />
-    <about v-if="mode" />
+    <rsvp v-if="mode" />
+    <program v-if="mode" />
+    <map-component v-if="mode" />
   </layout>
 </template>
 
 <script>
 import Login from "@/components/Login";
-import About from "@/components/About";
+import Rsvp from "@/components/Rsvp";
+import Program from "@/components/Program";
+import MapComponent from "@/components/Map";
 import { mapState } from "vuex";
 
 export default {
   name: "Index",
   components: {
     Login,
-    About
+    Rsvp,
+    Program,
+    MapComponent
   },
   computed: {
     ...mapState(["mode"])
