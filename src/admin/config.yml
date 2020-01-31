@@ -99,10 +99,8 @@ collections:
           default: true,
         }
       - { label: Für Festgäste sichtbar, name: visible_fest, widget: boolean }
-      - {
-        label: Bilder,
-        name: images,
-        widget: list,
-        fields: 
+      - label: Bilder
+        name: images
+        widget: list
+        fields:
           - { label: Bild, name: image, widget: image, allow_multiple: false }
-      }
