@@ -1,6 +1,6 @@
 <template>
   <section id="section-map" class="map container">
-    <h2>Anfahrt</h2>
+    <div v-html="$static.map.content"></div>
     <iframe
       width="736"
       height="552"
@@ -14,10 +14,19 @@
         href="https://www.google.ch/maps/place/Kirche+W%C3%BCrzbrunnen/@46.8634415,7.7349162,17z/data=!3m1!4b1!4m5!3m4!1s0x478fb60fd97500f5:0x35c56e6a8b2553e6!8m2!3d46.8634379!4d7.7371102?hl=de"
         target="_blank"
         class="button"
-      >Auf Google Maps anzeigen</a>
+      >{{$static.map.show_on_maps}}</a>
     </div>
   </section>
 </template>
+
+<static-query>
+query {
+  map:netlifyPages(path:"/src/admin/content/map") {
+    content,
+    show_on_maps
+  }
+}
+</static-query>
 
 <script>
 export default {

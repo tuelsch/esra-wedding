@@ -1,9 +1,9 @@
 <template>
   <nav class="navigation container">
-    <a href="#section-rsvp">Anmeldung</a>
-    <a href="#section-program">Programm</a>
-    <a href="#section-map">Anfahrt</a>
-    <a href>Bilder</a>
+    <g-link to="/#section-rsvp">Anmeldung</g-link>
+    <g-link to="/#section-program">Programm</g-link>
+    <g-link to="/#section-map">Anfahrt</g-link>
+    <g-link to="/gallery/">Bilder</g-link>
   </nav>
 </template>
 

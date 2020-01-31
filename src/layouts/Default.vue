@@ -2,7 +2,9 @@
   <div>
     <page-header v-if="mode" />
     <navigation v-if="mode" />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <page-footer v-if="mode" />
   </div>
 </template>
