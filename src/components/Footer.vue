@@ -2,7 +2,9 @@
   <footer class="footer">
     <g-image class="footer-background" :src="'/footer.jpg'"></g-image>
     <div class="footer-content">
-      <button class="link" @click="resetPW">Reset password</button>
+      <a href="" target="_blank">from bern with love</a> - © 2020 Esther und
+      Raphael -
+      <button class="link" @click="resetPW">Passwort zurücksetzen</button>
     </div>
   </footer>
 </template>

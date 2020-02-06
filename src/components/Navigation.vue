@@ -6,7 +6,8 @@
     <g-link
       v-if="$store.getters.getGalleryLinks($static.galleries.edges).length > 0"
       :to="getFirstGalleryLink"
-    >Bilder</g-link>
+      >Bilder</g-link
+    >
   </nav>
 </template>
 
@@ -73,6 +74,7 @@ export default {
 
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 
     opacity: 0;
     visibility: hidden;
