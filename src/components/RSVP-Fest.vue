@@ -1,39 +1,54 @@
 <template>
   <div class="rsvp-fest">
     <div v-html="$static.rsvp.content"></div>
-    <ul class="persons-list">
-      <li v-for="(person, index) in persons" :key="index">
-        <fest-person-form
-          :person="person"
-          :v="$v.persons.$each[index]"
-          :index="index"
-          @deletePerson="deletePerson"
-          @validPerson="validPerson"
-          v-if="person.editMode"
-        />
-        <div class="summary row mobile" v-if="!person.editMode">
-          <div>
-            <img class="profile-img" src="/person.png" alt />
-            <span>{{ person.firstname }} {{ person.lastname }}</span>
+    <div class="rsvp-container">
+      <g-image class="esra-img" src="/esra.jpg"></g-image>
+      <ul class="persons-list">
+        <li v-for="(person, index) in persons" :key="index">
+          <fest-person-form
+            :person="person"
+            :v="$v.persons.$each[index]"
+            :index="index"
+            @deletePerson="deletePerson"
+            @validPerson="validPerson"
+            v-if="person.editMode"
+          />
+          <div class="summary row mobile" v-if="!person.editMode">
+            <div>
+              <img class="profile-img" src="/person.png" alt />
+              <span>{{ person.firstname }} {{ person.lastname }}</span>
+            </div>
+            <div>
+              <button class="underlined" @click="editPerson(index)">
+                Bearbeiten
+              </button>
+              <button
+                class="underlined"
+                title="Löschen"
+                @click="deletePerson(index)"
+              >
+                <img src="/bin.png" alt />
+                <span class="sr-only">Löschen</span>
+              </button>
+            </div>
           </div>
-          <div>
-            <button class="underlined" @click="editPerson(index)">Bearbeiten</button>
-            <button class="underlined" title="Löschen" @click="deletePerson(index)">
-              <img src="/bin.png" alt />
-              <span class="sr-only">Löschen</span>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="add-person">
-        <button class="underlined" @click="addPerson" :disabled="hasEditModePerson">
-          <img class="profile-img" src="/add-person.png" alt />
-          <span>{{$static.rsvp.add_person}}</span>
-        </button>
-      </li>
-    </ul>
+        </li>
+        <li class="add-person">
+          <button
+            class="underlined"
+            @click="addPerson"
+            :disabled="hasEditModePerson"
+          >
+            <img class="profile-img" src="/add-person.png" alt />
+            <span>{{ $static.rsvp.add_person }}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
     <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">Senden</button>
+      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">
+        Senden
+      </button>
     </div>
   </div>
 </template>
@@ -153,6 +168,7 @@ export default {
   > div {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 
   & .profile-img {

@@ -74,7 +74,6 @@ export default {
   beforeRouteUpdate(to, from, next) {
     this.loaded = false;
     zoom.detach();
-    console.log("beforeRouteUpdate");
     next();
   },
   updated() {

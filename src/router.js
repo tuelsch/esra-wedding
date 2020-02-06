@@ -7,4 +7,7 @@ export default function(router, isClient, store) {
       next();
     }
   });
+  router.afterEach(() => {
+    document.body.classList.remove("navigation-open");
+  });
 }

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <p class="h3">{{$static.home.title}}</p>
-    <time class="h5">{{$static.home.date}}</time>
+    <p class="h3">{{ $static.home.title }}</p>
+    <time class="h5">{{ $static.home.date }}</time>
     <button class="navigation-toggler blank" @click="openNav">
       <span></span>
       <span class="sr-only">Navigation öffnen</span>

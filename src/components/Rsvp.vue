@@ -29,3 +29,36 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import "~/styles/mediaqueries.scss";
+
+.rsvp-container {
+  @include min($xs) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.esra-img {
+  display: block;
+  margin: 1em auto;
+
+  @include min($s) {
+    width: 20rem;
+    margin-left: -10rem;
+    margin-right: 5rem;
+  }
+
+  @include between($xs, $s) {
+    width: 10rem;
+    //margin-left: -5rem;
+    margin-right: 2.5rem;
+  }
+
+  @include max($xs) {
+    max-width: 75%;
+  }
+}
+</style>
