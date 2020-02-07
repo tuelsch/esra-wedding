@@ -7,8 +7,7 @@
             v-for="(gallery, index) in galleries"
             :key="index"
             :to="gallery.href"
-            >{{ gallery.node.title }}</g-link
-          >
+          >{{ gallery.node.title }}</g-link>
         </nav>
       </aside>
       <div class="gallery" :class="{ loaded }">
@@ -48,11 +47,10 @@
 </page-query>
 
 <script>
-import Masonry from "masonry-layout";
-import mediumZoom from "medium-zoom";
-
+let mediumZoom;
+let Masonry;
 let masonry;
-let zoom = mediumZoom();
+let zoom;
 
 export default {
   data() {
@@ -70,6 +68,13 @@ export default {
           return gallery;
         });
     }
+  },
+  async beforeMount() {
+    const MasonryModule = await import("masonry-layout");
+    Masonry = MasonryModule.default;
+    const mediumZoomModule = await import("medium-zoom");
+    mediumZoom = mediumZoomModule.default;
+    zoom = mediumZoom();
   },
   beforeRouteUpdate(to, from, next) {
     this.loaded = false;
