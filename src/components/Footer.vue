@@ -30,6 +30,8 @@ export default {
   display: block;
   max-width: none;
   width: 100%;
+  position: relative;
+  z-index: -1;
 }
 .footer-content {
   position: absolute;

@@ -18,12 +18,27 @@ export default {
       title: this.$static.metadata.siteName,
       meta: [
         {
-          key: 'description',
-          name: 'description',
+          key: "description",
+          name: "description",
           content: this.$static.metadata.siteDescription
         }
       ]
-    }
+    };
+  },
+  mounted() {
+    document.body.addEventListener("click", e => {
+      console.log(e);
+      const { pageX, pageY } = e;
+      const img = document.createElement("img");
+      img.src = `/dot${Math.round(Math.random() * 9)}.png`;
+      img.classList.add("dot");
+      img.style.top = `${pageY}px`;
+      img.style.left = `${pageX}px`;
+      img.style.transform = `translate(-50%, -50%) rotateZ(${Math.random() *
+        360}deg)`;
+      // img.style.width = `${Math.random() * 2 + 1}em`;
+      document.body.append(img);
+    });
   }
-}
+};
 </script>

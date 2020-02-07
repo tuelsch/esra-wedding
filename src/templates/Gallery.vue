@@ -7,7 +7,8 @@
             v-for="(gallery, index) in galleries"
             :key="index"
             :to="gallery.href"
-          >{{ gallery.node.title }}</g-link>
+            >{{ gallery.node.title }}</g-link
+          >
         </nav>
       </aside>
       <div class="gallery" :class="{ loaded }">
@@ -51,6 +52,7 @@ let mediumZoom;
 let Masonry;
 let masonry;
 let zoom;
+let libsPromise;
 
 export default {
   data() {
@@ -71,10 +73,12 @@ export default {
   },
   async beforeMount() {
     const MasonryModule = await import("masonry-layout");
-    Masonry = MasonryModule.default;
     const mediumZoomModule = await import("medium-zoom");
-    mediumZoom = mediumZoomModule.default;
-    zoom = mediumZoom();
+    libsPromise = Promise.all([MasonryModule, mediumZoomModule]).then(() => {
+      Masonry = MasonryModule.default;
+      mediumZoom = mediumZoomModule.default;
+      zoom = mediumZoom();
+    });
   },
   beforeRouteUpdate(to, from, next) {
     this.loaded = false;
@@ -92,9 +96,10 @@ export default {
       this.loadedImages++;
       if (this.loadedImages >= this.$page.gallery.images.length) {
         const gallery = document.querySelector(".gallery");
-        masonry = new Masonry(gallery, { gutter: 8 });
-        zoom.attach("[data-zoomable]");
-        this.$nextTick(() => {
+        this.$nextTick(async () => {
+          await libsPromise;
+          masonry = new Masonry(gallery, { gutter: 8 });
+          zoom.attach("[data-zoomable]");
           this.loaded = true;
         });
       }

@@ -121,3 +121,9 @@ form {
   width: 1px !important;
   white-space: nowrap !important; /* 3 */
 }
+
+.dot {
+  position: absolute;
+  z-index: -1;
+  max-width: 2.5em;
+}
