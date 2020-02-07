@@ -1,8 +1,8 @@
 <template>
   <main class="login container">
-    <form name="test" class="pw-form" @submit.prevent="checkPW" :class="{ error: error }">
-      <h1>{{$static.login.title}}</h1>
-      <time class="h3">{{$static.login.date}}</time>
+    <div name="test" class="pw-form" :class="{ error: error }">
+      <h1>{{ $static.login.title }}</h1>
+      <time class="h3">{{ $static.login.date }}</time>
       <div class="input">
         <input
           id="pw"
@@ -13,13 +13,22 @@
           autocomplete="off"
           v-model="pw"
         />
-        <label class="pw-label" for="pw">{{$static.login.code}}</label>
-        <button class="submit" type="submit" :class="{ ok: !!pw }">
+        <label class="pw-label" for="pw">{{ $static.login.code }}</label>
+        <button
+          @click="checkPW"
+          class="submit"
+          type="submit"
+          :class="{ ok: !!pw }"
+        >
           <img aria-hidden="true" src="/arrow-right.svg" alt="Pfeil rechts" />
         </button>
       </div>
-      <g-image class="fleck" alt="Hintergrundbild" :src="$static.login.background" />
-    </form>
+      <g-image
+        class="fleck"
+        alt="Hintergrundbild"
+        :src="$static.login.background"
+      />
+    </div>
   </main>
 </template>
 
