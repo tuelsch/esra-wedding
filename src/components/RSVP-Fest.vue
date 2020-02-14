@@ -11,22 +11,16 @@
             :index="index"
             @deletePerson="deletePerson"
             @validPerson="validPerson"
-            v-if="person.editMode"
+            v-show="person.editMode"
           />
-          <div class="summary row mobile" v-if="!person.editMode">
+          <div class="summary row mobile" v-show="!person.editMode">
             <div>
               <img class="profile-img" src="/person.png" alt />
               <span>{{ person.firstname }} {{ person.lastname }}</span>
             </div>
             <div>
-              <button class="underlined" @click="editPerson(index)">
-                Bearbeiten
-              </button>
-              <button
-                class="underlined"
-                title="Löschen"
-                @click="deletePerson(index)"
-              >
+              <button class="underlined" @click="editPerson(index)">Bearbeiten</button>
+              <button class="underlined" title="Löschen" @click="deletePerson(index)">
                 <img src="/bin.png" alt />
                 <span class="sr-only">Löschen</span>
               </button>
@@ -34,11 +28,7 @@
           </div>
         </li>
         <li class="add-person">
-          <button
-            class="underlined"
-            @click="addPerson"
-            :disabled="hasEditModePerson"
-          >
+          <button class="underlined" @click="addPerson" :disabled="hasEditModePerson">
             <img class="profile-img" src="/add-person.png" alt />
             <span>{{ $static.rsvp.add_person }}</span>
           </button>
@@ -46,9 +36,7 @@
       </ul>
     </div>
     <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">
-        Senden
-      </button>
+      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">Senden</button>
     </div>
   </div>
 </template>

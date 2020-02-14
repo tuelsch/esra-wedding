@@ -1,8 +1,8 @@
 <template>
   <section id="section-rsvp" class="container">
-    <rsvp-apero v-if="!rsvpSent && mode === EMode.Apero" />
-    <rsvp-fest v-if="!rsvpSent && mode === EMode.Fest" />
-    <thx-for-rsvp v-if="rsvpSent" />
+    <rsvp-apero v-show="!rsvpSent && mode === EMode.Apero" />
+    <rsvp-fest v-show="!rsvpSent && mode === EMode.Fest" />
+    <thx-for-rsvp v-show="rsvpSent" />
   </section>
 </template>
 

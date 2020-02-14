@@ -5,10 +5,7 @@
       <g-image src="/esra.jpg" class="esra-img"></g-image>
       <div>
         <div class="row">
-          <div
-            class="input"
-            :class="{ error: !$v.firstname.required && $v.firstname.$dirty }"
-          >
+          <div class="input" :class="{ error: !$v.firstname.required && $v.firstname.$dirty }">
             <input
               type="text"
               id="apero-firstname"
@@ -19,15 +16,10 @@
             <label for="apero-firstname">{{ $static.rsvp.firstname }}</label>
             <p
               class="error"
-              v-if="!$v.firstname.required && $v.firstname.$dirty"
-            >
-              {{ $static.rsvp.firstname_error }}
-            </p>
+              v-show="!$v.firstname.required && $v.firstname.$dirty"
+            >{{ $static.rsvp.firstname_error }}</p>
           </div>
-          <div
-            class="input"
-            :class="{ error: !$v.lastname.required && $v.lastname.$dirty }"
-          >
+          <div class="input" :class="{ error: !$v.lastname.required && $v.lastname.$dirty }">
             <input
               type="text"
               id="apero-lastname"
@@ -36,16 +28,14 @@
               v-model="lastname"
             />
             <label for="apero-lastname">{{ $static.rsvp.lastname }}</label>
-            <p class="error" v-if="!$v.lastname.required && $v.lastname.$dirty">
-              {{ $static.rsvp.lastname_error }}
-            </p>
+            <p
+              class="error"
+              v-show="!$v.lastname.required && $v.lastname.$dirty"
+            >{{ $static.rsvp.lastname_error }}</p>
           </div>
         </div>
         <div class="row mobile">
-          <div
-            class="input"
-            :class="{ error: !$v.adults.required && $v.adults.$dirty }"
-          >
+          <div class="input" :class="{ error: !$v.adults.required && $v.adults.$dirty }">
             <input
               type="number"
               min="0"
@@ -55,14 +45,12 @@
               v-model="adults"
             />
             <label for="apero-adults">{{ $static.rsvp.adults }}</label>
-            <p class="error" v-if="!$v.adults.required && $v.adults.$dirty">
-              {{ $static.rsvp.adults_error }}
-            </p>
+            <p
+              class="error"
+              v-show="!$v.adults.required && $v.adults.$dirty"
+            >{{ $static.rsvp.adults_error }}</p>
           </div>
-          <div
-            class="input"
-            :class="{ error: !$v.children.required && $v.children.$dirty }"
-          >
+          <div class="input" :class="{ error: !$v.children.required && $v.children.$dirty }">
             <input
               type="number"
               min="0"
@@ -72,9 +60,10 @@
               v-model="children"
             />
             <label for="apero-children">{{ $static.rsvp.children }}</label>
-            <p class="error" v-if="!$v.children.required && $v.children.$dirty">
-              {{ $static.rsvp.children_error }}
-            </p>
+            <p
+              class="error"
+              v-show="!$v.children.required && $v.children.$dirty"
+            >{{ $static.rsvp.children_error }}</p>
           </div>
         </div>
         <div class="row">
@@ -92,9 +81,7 @@
       </div>
     </div>
     <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="checkForm">
-        Senden
-      </button>
+      <button class="fancy" :disabled="rsvpSent || sending" @click="checkForm">Senden</button>
     </div>
   </div>
 </template>

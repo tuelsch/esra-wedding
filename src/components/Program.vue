@@ -1,7 +1,7 @@
 <template>
   <section id="section-program" class="program container">
-    <div class v-if="mode === EMode.Apero" v-html="$static.program_apero.content"></div>
-    <div class v-if="mode === EMode.Fest" v-html="$static.program_fest.content"></div>
+    <div class v-show="mode === EMode.Apero" v-html="$static.program_apero.content"></div>
+    <div class v-show="mode === EMode.Fest" v-html="$static.program_fest.content"></div>
   </section>
 </template>
 

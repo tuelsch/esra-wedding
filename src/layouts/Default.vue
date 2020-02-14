@@ -1,11 +1,11 @@
 <template>
   <div>
-    <page-header v-if="mode" />
-    <navigation v-if="mode" />
+    <page-header v-show="mode" />
+    <navigation v-show="mode" />
     <main>
       <slot />
     </main>
-    <page-footer v-if="mode" />
+    <page-footer v-show="mode" />
   </div>
 </template>
 

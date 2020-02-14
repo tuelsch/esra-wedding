@@ -4,10 +4,9 @@
     <g-link to="/#section-program">Programm</g-link>
     <g-link to="/#section-map">Anfahrt</g-link>
     <g-link
-      v-if="$store.getters.getGalleryLinks($static.galleries.edges).length > 0"
+      v-show="$store.getters.getGalleryLinks($static.galleries.edges).length > 0"
       :to="getFirstGalleryLink"
-      >Bilder</g-link
-    >
+    >Bilder</g-link>
   </nav>
 </template>
 

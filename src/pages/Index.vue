@@ -1,9 +1,9 @@
 <template>
   <layout>
-    <login v-if="!mode" />
-    <rsvp v-if="mode" />
-    <program v-if="mode" />
-    <map-component v-if="mode" />
+    <login v-show="!mode" />
+    <rsvp v-show="mode" />
+    <program v-show="mode" />
+    <map-component v-show="mode" />
   </layout>
 </template>
 
