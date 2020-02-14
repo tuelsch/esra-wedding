@@ -27,7 +27,6 @@ export default {
   },
   mounted() {
     document.body.addEventListener("click", e => {
-      console.log(e);
       const { pageX, pageY } = e;
       const img = document.createElement("img");
       img.src = `/dot${Math.round(Math.random() * 9)}.png`;
@@ -36,7 +35,6 @@ export default {
       img.style.left = `${pageX}px`;
       img.style.transform = `translate(-50%, -50%) rotateZ(${Math.random() *
         360}deg)`;
-      // img.style.width = `${Math.random() * 2 + 1}em`;
       document.body.append(img);
     });
   }

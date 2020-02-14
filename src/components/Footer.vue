@@ -2,7 +2,7 @@
   <footer class="footer">
     <g-image class="footer-background" :src="'/footer.jpg'"></g-image>
     <div class="footer-content">
-      <a href="" target="_blank">from bern with love</a> - © 2020 Esther und
+      <a href target="_blank">from bern with love</a> - © 2020 Esther und
       Raphael -
       <button class="link" @click="resetPW">Passwort zurücksetzen</button>
     </div>
@@ -16,7 +16,7 @@ export default {
     ...mapMutations(["setMode"]),
     resetPW() {
       this.setMode(null);
-      this.$router.push("/");
+      // this.$router.push("/");
     }
   }
 };

@@ -12,22 +12,14 @@
           :placeholder="$static.login.code"
           autocomplete="off"
           v-model="pw"
+          @keypress.enter="checkPW"
         />
         <label class="pw-label" for="pw">{{ $static.login.code }}</label>
-        <button
-          @click="checkPW"
-          class="submit"
-          type="submit"
-          :class="{ ok: !!pw }"
-        >
+        <button @click="checkPW" class="submit" type="submit" :class="{ ok: !!pw }">
           <img aria-hidden="true" src="/arrow-right.svg" alt="Pfeil rechts" />
         </button>
       </div>
-      <g-image
-        class="fleck"
-        alt="Hintergrundbild"
-        :src="$static.login.background"
-      />
+      <g-image class="fleck" alt="Hintergrundbild" :src="$static.login.background" />
     </div>
   </main>
 </template>

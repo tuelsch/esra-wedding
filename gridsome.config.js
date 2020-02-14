@@ -6,6 +6,9 @@
 
 module.exports = {
   siteName: "esra-wedding",
+  configureWebpack: {
+    mode: "development"
+  },
   transformers: {
     remark: {
       externalLinksTarget: "_blank",

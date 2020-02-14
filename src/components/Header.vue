@@ -34,8 +34,6 @@ export default {
   width: 100%;
   margin: 0 auto 1em auto;
   padding: 1em 0;
-  transform: translateY(0) scale(1);
-  // transition: transform 0.5s ease-in-out;
 
   @include max($xxs) {
     --base: 12px;
