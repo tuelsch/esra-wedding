@@ -1,38 +1,45 @@
 <template>
   <div class="fest-person-form">
     <div class="row">
-      <div class="input" :class="{ error: !v.firstname.required && v.firstname.$dirty }">
+      <div
+        class="input"
+        :class="{ error: !v.firstname.required && v.firstname.$dirty }"
+      >
         <input
           type="text"
-          id="apero-firstname"
+          :id="'fest-firstname' + index"
           name="firstname"
           placeholder="Vorname"
           v-model="person.firstname"
         />
-        <label for="apero-firstname">{{$static.rsvp.firstname}}</label>
-        <p
-          class="error"
-          v-if="!v.firstname.required && v.firstname.$dirty"
-        >{{$static.rsvp.firstname_error}}</p>
+        <label for="fest-firstname">{{ $static.rsvp.firstname }}</label>
+        <p class="error" v-show="!v.firstname.required && v.firstname.$dirty">
+          {{ $static.rsvp.firstname_error }}
+        </p>
       </div>
-      <div class="input" :class="{ error: !v.lastname.required && v.lastname.$dirty }">
+      <div
+        class="input"
+        :class="{ error: !v.lastname.required && v.lastname.$dirty }"
+      >
         <input
           type="text"
-          id="apero-lastname"
+          :id="'fest-lastname' + index"
           name="lastname"
           placeholder="Name"
           v-model="person.lastname"
         />
-        <label for="apero-lastname">{{$static.rsvp.lastname}}</label>
-        <p
-          class="error"
-          v-if="!v.lastname.required && v.lastname.$dirty"
-        >{{$static.rsvp.lastname_error}}</p>
+        <label for="fest-lastname">{{ $static.rsvp.lastname }}</label>
+        <p class="error" v-show="!v.lastname.required && v.lastname.$dirty">
+          {{ $static.rsvp.lastname_error }}
+        </p>
       </div>
     </div>
     <div class="row">
-      <span>{{$static.rsvp.apero}}</span>
-      <div class="radio" :class="{ error: !v.apero.required && v.apero.$dirty }">
+      <span>{{ $static.rsvp.apero }}</span>
+      <div
+        class="radio"
+        :class="{ error: !v.apero.required && v.apero.$dirty }"
+      >
         <input
           type="radio"
           :id="index + 'apero-ja'"
@@ -55,11 +62,19 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.apero.required && v.apero.$dirty">{{$static.rsvp.apero_error}}</p>
+    <p class="error" v-show="!v.apero.required && v.apero.$dirty">
+      {{ $static.rsvp.apero_error }}
+    </p>
     <div class="row">
-      <span>{{$static.rsvp.fest}}</span>
+      <span>{{ $static.rsvp.fest }}</span>
       <div class="radio" :class="{ error: !v.fest.required && v.fest.$dirty }">
-        <input type="radio" :id="index + 'fest-ja'" name="fest" :value="true" v-model="person.fest" />
+        <input
+          type="radio"
+          :id="index + 'fest-ja'"
+          name="fest"
+          :value="true"
+          v-model="person.fest"
+        />
         <label :for="index + 'fest-ja'">
           <span>Ja</span>
         </label>
@@ -75,10 +90,15 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.fest.required && v.fest.$dirty">{{$static.rsvp.fest_error}}</p>
+    <p class="error" v-show="!v.fest.required && v.fest.$dirty">
+      {{ $static.rsvp.fest_error }}
+    </p>
     <div class="row">
-      <span>{{$static.rsvp.night}}</span>
-      <div class="radio" :class="{ error: !v.night.required && v.night.$dirty }">
+      <span>{{ $static.rsvp.night }}</span>
+      <div
+        class="radio"
+        :class="{ error: !v.night.required && v.night.$dirty }"
+      >
         <input
           type="radio"
           :id="index + 'night-ja'"
@@ -101,7 +121,9 @@
         </label>
       </div>
     </div>
-    <p class="error" v-if="!v.night.required && v.night.$dirty">{{$static.rsvp.night_error}}</p>
+    <p class="error" v-show="!v.night.required && v.night.$dirty">
+      {{ $static.rsvp.night_error }}
+    </p>
     <div class="row">
       <div class="input">
         <textarea
@@ -111,11 +133,11 @@
           placeholder="Bemerkungen, Allergien, Vegetarisch"
           v-model="person.comments"
         ></textarea>
-        <label for="fest-comments">{{$static.rsvp.comments}}</label>
+        <label for="fest-comments">{{ $static.rsvp.comments }}</label>
       </div>
     </div>
     <div class="row align-right">
-      <button @click="deletePerson" v-if="index > 0">Löschen</button>
+      <button @click="deletePerson" v-show="index > 0">Löschen</button>
       <button @click="savePerson">Speichern</button>
     </div>
   </div>
