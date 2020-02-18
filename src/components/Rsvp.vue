@@ -34,31 +34,30 @@ export default {
 @import "~/styles/mediaqueries.scss";
 
 .rsvp-container {
-  @include min($xs) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+  position: relative;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.33);
+  padding: 2rem;
+  margin: 1rem auto;
+
+  > div > *:first-child {
+    margin-top: 0.5em;
   }
 }
 
 .esra-img {
   display: block;
-  margin: 1em auto;
 
   @include min($s) {
-    width: 20rem;
-    margin-left: -10rem;
-    margin-right: 5rem;
+    margin: 3rem auto -5rem -22%;
+    //margin: calc(-16.5% - 2rem) auto 0 auto;
+    max-width: 33%;
   }
 
-  @include between($xs, $s) {
-    width: 10rem;
-    //margin-left: -5rem;
-    margin-right: 2.5rem;
-  }
-
-  @include max($xs) {
-    max-width: 75%;
+  @include max($s) {
+    margin: 1em auto;
+    max-width: 50%;
   }
 }
 </style>

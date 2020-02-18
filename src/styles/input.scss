@@ -102,6 +102,11 @@ button {
     @include max($xs) {
       padding: 3em 5em 4em 6em;
       filter: grayscale(0);
+      transition: transform 0.1s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &:hover {

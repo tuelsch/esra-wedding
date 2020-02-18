@@ -1,8 +1,8 @@
 <template>
   <div class="rsvp-fest">
-    <div v-html="$static.rsvp.content"></div>
+    <g-image class="esra-img" src="/img/esra.jpg"></g-image>
     <div class="rsvp-container">
-      <g-image class="esra-img" src="/esra.jpg"></g-image>
+      <div v-html="$static.rsvp.content"></div>
       <ul class="persons-list">
         <li v-for="(person, index) in persons" :key="index">
           <fest-person-form
@@ -34,9 +34,9 @@
           </button>
         </li>
       </ul>
-    </div>
-    <div class="row align-center">
-      <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">Senden</button>
+      <div class="row align-center">
+        <button class="fancy" :disabled="rsvpSent || sending" @click="sendForm">Senden</button>
+      </div>
     </div>
   </div>
 </template>
@@ -191,7 +191,7 @@ export default {
   list-style: none;
 
   li {
-    border-top: 1px solid black;
+    border-top: 2px solid black;
     &:first-child {
       border-top: none;
     }
