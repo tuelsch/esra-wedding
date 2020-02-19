@@ -23,3 +23,9 @@ Party
 ###### ab 09:00
 
 Frühstück im Hirschen Eggiwil
+
+
+
+### Infos
+
+Die Infos werden hier dargestellt.
