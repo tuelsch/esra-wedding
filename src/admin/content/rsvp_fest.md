@@ -7,9 +7,9 @@ apero: Apéro
 apero_error: Nimmst du am Apéro teil?
 fest: Abendessen (ohne Kinder)
 fest_error: Nimmst du am Abendessen teil?
-night: Übernachtung mit Morgenessen
-night_error: Möchtest du im Hirschen Übernachten?
-comments: 'Bemerkungen, Allergien, Vegetarisch, etc.'
+night: Übernachtung mit Frühstück
+night_error: Möchtest du im Hirschen übernachten?
+comments: 'Bemerkungen, Allergien, vegetarisch, etc.'
 add_person: Gast hinzufügen
 ---
 ## Anmeldung Abendessen
