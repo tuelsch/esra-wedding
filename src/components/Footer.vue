@@ -16,6 +16,7 @@ export default {
     ...mapMutations(["setMode"]),
     resetPW() {
       this.setMode(null);
+      window.scrollTo(0, 0);
       // this.$router.push("/");
     }
   }
@@ -32,6 +33,11 @@ export default {
   width: 100%;
   position: relative;
   z-index: -1;
+
+  @media screen and (max-width: 765px) {
+    height: 20rem;
+    object-fit: cover;
+  }
 }
 .footer-content {
   position: absolute;

@@ -41,8 +41,16 @@ export default {
   padding: 2rem;
   margin: 1rem auto;
 
-  > div > *:first-child {
-    margin-top: 0.5em;
+  & > div {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > p {
+      margin-top: 0.5rem;
+    }
   }
 }
 

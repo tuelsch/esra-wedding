@@ -64,6 +64,7 @@ export default {
         this.setMode(null);
         this.error = true;
       }
+      this.pw = "";
     }
   }
 };

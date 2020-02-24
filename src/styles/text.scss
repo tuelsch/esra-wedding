@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display&display=swap");
+
 $ratio: 1.25;
 
 body {
   line-height: 1.5;
-  font-family: "Comfortaa", "Segoe UI", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
 
   @include min($xs) {
     --base: 20px;
@@ -35,7 +37,7 @@ h6,
 .h6 {
   display: block;
   margin: 1em auto;
-  font-family: "Great Vibes", "Georgia", serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
   text-align: center;
 }

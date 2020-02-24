@@ -33,7 +33,7 @@
           >{{ $static.rsvp.lastname_error }}</p>
         </div>
       </div>
-      <div class="row mobile">
+      <div class="row">
         <div class="input" :class="{ error: !$v.adults.required && $v.adults.$dirty }">
           <input
             type="number"
