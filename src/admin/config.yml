@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: tuelsch/esra-wedding
-
-backend:
   name: git-gateway
+  repo: tuelsch/esra-wedding
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
