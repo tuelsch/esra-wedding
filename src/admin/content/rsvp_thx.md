@@ -1,6 +1,6 @@
 ---
 add_invite: Zusätzliche Anmeldung erfassen
 ---
-## Merci viumau!
+## Herzlichen Dank!
 
-Danke schön für dini Aamäudig.
+Wir danken herzlich für die Anmeldung und freuen uns sehr auf das Fest!
