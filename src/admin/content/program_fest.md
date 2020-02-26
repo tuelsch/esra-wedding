@@ -8,7 +8,7 @@ Kirchliche Trauung in der Kirche Würzbrunnen
 
 ###### 15:00 - 17:30
 
-Apéro auf der Festbühne Würzbrunnen
+Apéro in der Festbühne Würzbrunnen
 
 ###### ab 18:00
 
@@ -23,8 +23,6 @@ Party
 ###### ab 09:00
 
 Frühstück im Hirschen Eggiwil
-
-
 
 ### Infos
 
