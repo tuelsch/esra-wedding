@@ -12,6 +12,6 @@ night_error: Möchtest du im Hirschen übernachten?
 comments: 'Bemerkungen, Allergien, vegetarisch, etc.'
 add_person: Gast hinzufügen
 ---
-## Anmeldung Abendessen
+## Anmeldung
 
-Anmeldung fürs Abendessen. Bitte alle Gäste anmelden. Ohne Kinder.
+Bitte alle Gäste anmelden. Ohne Kinder.
