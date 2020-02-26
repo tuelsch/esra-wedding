@@ -9,6 +9,6 @@ children: Anzahl Kinder
 children_error: Bitte gib die Anzahl Kinder ein.
 comments: Bemerkungen etc.
 ---
-## Anmeldung Apéro
+## Anmeldung
 
 wow
