@@ -28,8 +28,16 @@ Frühstück im Hirschen Eggiwil
 
 Wir freuen uns auf ein wunderschönes Fest!
 
-Wir lieben Kinder, feiern auch gern beim Apéro mit ihnen, aber am Abend feiern wir gerne unter uns.
+Wir lieben Kinder, sie dürfen auch gerne beim Apéro mit dabei sein, aber am Abend feiern wir gerne unter uns.
 
 Falls ihr übernachten möchtet, teilt uns dies bei der Anmeldung mit.
 
 Das Check-in im Hotel Hirschen ist ab 12.00 Uhr möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden. Vom Hirschen zur Kirche sind es ca. 10 Min. mit dem Auto.
+
+Das grösste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch etwas schenken möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
+
+Unsere Trauzeugen sind:
+
+\-Christian Joss (078 885 63 63)
+
+\-Renate Hodel (079 307 10 39)
