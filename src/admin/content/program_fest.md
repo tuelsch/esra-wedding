@@ -34,6 +34,8 @@ Falls ihr übernachten möchtet, teilt uns dies bei der Anmeldung mit.
 
 Das Check-in im Hotel Hirschen ist ab 12.00 Uhr möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden. Vom Hirschen zur Kirche sind es ca. 10 Min. mit dem Auto.
 
+Adresse Hotel Restaurant Hirschen: Heidbühl 471, 3537 Eggiwil
+
 Das grösste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch etwas schenken möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
 
 Unsere Trauzeugen sind:
