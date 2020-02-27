@@ -26,4 +26,10 @@ Frühstück im Hirschen Eggiwil
 
 ### Infos
 
-Die Infos werden hier dargestellt.
+Wir freuen uns auf ein wunderschönes Fest!
+
+Wir lieben Kinder, feiern auch gern beim Apéro mit ihnen, aber am Abend feiern wir gerne unter uns.
+
+Falls ihr übernachten möchtet, teilt uns dies bei der Anmeldung mit.
+
+Das Check-in im Hotel Hirschen ist ab 12.00 Uhr möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden. Vom Hirschen zur Kirche sind es ca. 10 Min. mit dem Auto.
