@@ -16,4 +16,4 @@ add_person: Gast hinzufügen
 
 Wir freuen uns sehr über eure Anmeldungen!
 
-Bitte alle Gäste einzeln anmelden.
+Bitte alle Gäste einzeln eintragen.
