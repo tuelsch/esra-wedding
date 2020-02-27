@@ -4,7 +4,7 @@
 
 ###### 14:00 - 15:00
 
-Kirchliche Trauung in der Kirche Würzbrunnen
+Trauung in der Kirche Würzbrunnen
 
 ###### 15:00 - 17:30
 
