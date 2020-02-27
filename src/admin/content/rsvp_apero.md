@@ -11,4 +11,6 @@ comments: Bemerkungen etc.
 ---
 ## Anmeldung
 
-wow
+Wir freuen uns sehr über eure Anmeldungen!
+
+Bitte alle Gäste einzeln eintragen.
