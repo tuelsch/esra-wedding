@@ -14,4 +14,6 @@ add_person: Gast hinzufügen
 ---
 ## Anmeldung
 
-Bitte alle Gäste anmelden. Ohne Kinder.
+Wir freuen uns sehr über eure Anmeldungen!
+
+Bitte alle Gäste einzeln eintragen.
