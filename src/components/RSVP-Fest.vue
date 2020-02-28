@@ -55,6 +55,7 @@ import { validationMixin } from "vuelidate";
 import { required, minLength } from "vuelidate/lib/validators";
 import { mapMutations, mapState } from "vuex";
 import FestPersonForm from "@/components/FestPersonForm";
+import scrollto from "@/modules/scrollto";
 
 const defaultPersonData = () => ({
   firstname: "",
@@ -113,6 +114,11 @@ export default {
   },
   methods: {
     ...mapMutations(["sendRsvp"]),
+    scrollTo(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    },
     addPerson() {
       this.persons.push(new defaultPersonData());
       this.$v.persons.$each[this.persons.length - 1].$reset();
@@ -122,6 +128,7 @@ export default {
     },
     validPerson(index) {
       this.persons[index].editMode = false;
+      this.scrollTo("section-rsvp");
     },
     editPerson(index) {
       this.persons[index].editMode = true;
@@ -136,6 +143,9 @@ export default {
             persons: this.persons,
             created: Date.now()
           });
+          this.persons = [new defaultPersonData()];
+          this.$v.$reset();
+          this.scrollTo("section-rsvp");
           this.sendRsvp(true);
         } catch (error) {
           console.error(error);

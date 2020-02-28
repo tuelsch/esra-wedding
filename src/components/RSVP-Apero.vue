@@ -105,6 +105,7 @@
 import { validationMixin } from "vuelidate";
 import { required, minValue } from "vuelidate/lib/validators";
 import { mapMutations, mapState } from "vuex";
+import scrollto from "@/modules/scrollto";
 
 export default {
   mixins: [validationMixin],
@@ -163,7 +164,13 @@ export default {
             comments: this.comments,
             created: Date.now()
           });
-
+          this.firstname = "";
+          this.lastname = "";
+          this.adults = "";
+          this.children = "";
+          this.comments = "";
+          this.$v.$reset();
+          scrollto("section-rsvp");
           this.sendRsvp(true);
         } catch (error) {
           console.error(error);
