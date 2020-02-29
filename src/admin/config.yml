@@ -24,6 +24,23 @@ collections:
             }
           - { label: Apéro Passwort, name: apero_pw, widget: string }
           - { label: Fest Passwort, name: fest_pw, widget: string }
+      - label: Meta Infos
+        name: meta
+        file: src/admin/content/meta.md
+        fields:
+          - { label: Titel (Browsertab), name: title, widget: string }
+          - {
+              label: Beschrieb,
+              description: Beschrieb beim Teilen der Seite z.B. auf Facebook oder WhatsApp,
+              name: description,
+              widget: string,
+            }
+          - {
+              label: Titelbild,
+              description: Bild beim Teilen des Links auf WhatsApp oder Facebook,
+              name: img,
+              widget: image,
+            }
       - label: "Anmeldung Apéro"
         name: "rsvp"
         file: "src/admin/content/rsvp_apero.md"
