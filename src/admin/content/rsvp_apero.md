@@ -11,6 +11,6 @@ comments: Bemerkungen etc.
 ---
 ## Anmeldung
 
-Bitte Anzahl der Gäste eintragen.
+Wir freuen uns sehr über eure Anmeldungen!
 
-Wir freuen uns sehr über eure Anmeldung!
+Bitte Anzahl der Gäste eintragen.
