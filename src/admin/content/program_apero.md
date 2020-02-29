@@ -16,7 +16,7 @@ Bei der Kirche und bei der Festbühne Würzbrunnen stehen einige Parkplätze zur
 
 Dresscode: festlich, elegant, sommerlich, schick, ... so wie ihr euch wohlfühlt!
 
-Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wir freuen uns sehr, mit euch zu feiern! Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
+Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wir freuen uns sehr, mit euch zu feiern! Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  ).
 
 Unsere Trauzeugen sind:
 
