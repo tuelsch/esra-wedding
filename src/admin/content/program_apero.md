@@ -14,7 +14,7 @@ Apéro in der Festbühne Würzbrunnen
 
 Wir freuen uns auf ein wunderschönes Fest!
 
-Das grösste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch etwas schenken möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
+Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
 
 Unsere Trauzeugen sind:
 
