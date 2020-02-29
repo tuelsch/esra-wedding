@@ -4,9 +4,10 @@
 
 <static-query>
 query {
-  metadata {
-    siteName
-    siteDescription
+  meta:netlifyPages(path:"/src/admin/content/meta") {
+    title,
+    img,
+    description
   }
 }
 </static-query>
@@ -15,12 +16,27 @@ query {
 export default {
   metaInfo() {
     return {
-      title: this.$static.metadata.siteName,
+      title: this.$static.meta.title,
       meta: [
         {
           key: "description",
           name: "description",
-          content: this.$static.metadata.siteDescription
+          content: this.$static.meta.description
+        },
+        {
+          key: "og:title",
+          name: "og:title",
+          content: this.$static.meta.title
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.$static.meta.description
+        },
+        {
+          key: "og:image",
+          name: "og:image",
+          content: this.$static.meta.img
         }
       ]
     };

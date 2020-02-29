@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: "esra-wedding",
+  titleTemplate: "%s",
   configureWebpack: {
     mode: "development"
   },
