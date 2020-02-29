@@ -22,7 +22,7 @@ Frühstück im Hotel Restaurant Hirschen Eggiwil
 
 ### Infos
 
-Bei der Kirche und bei der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung.
+Bei der Kirche und der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung.
 
 Mit den Kindern feiern wir sehr gerne bis zum Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen das Abendessen und die Party unter Erwachsenen.
 
