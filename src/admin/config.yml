@@ -30,13 +30,13 @@ collections:
         fields:
           - { label: Titel (Browsertab), name: title, widget: string }
           - {
-              label: Beschrieb,
+              label: Beschrieb (Beim teilen auf WhatsApp z.B.),
               description: Beschrieb beim Teilen der Seite z.B. auf Facebook oder WhatsApp,
               name: description,
               widget: string,
             }
           - {
-              label: Titelbild,
+              label: Titelbild (Beim teilen auf WhatsApp z.B.),
               description: Bild beim Teilen des Links auf WhatsApp oder Facebook,
               name: img,
               widget: image,
