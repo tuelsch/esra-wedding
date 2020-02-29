@@ -8,7 +8,7 @@ Trauung in der Kirche Würzbrunnen
 
 ###### 15:00 - 17:30
 
-Apéro auf der Festbühne Würzbrunnen
+Apéro in der Festbühne Würzbrunnen
 
 ### Infos
 
