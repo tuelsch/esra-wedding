@@ -26,7 +26,7 @@ Frühstück im Hotel Restaurant Hirschen Eggiwil
 
 ### Infos
 
-Wir freuen uns auf ein wunderschönes Fest!
+Bei der Kirche und bei der Festbühne Würzbrunnen stehen einige Parkplätze zur Verfügung.
 
 Mit den Kindern feiern wir sehr gerne bis zum Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen Abendessen und Party unter Erwachsenen.
 
@@ -43,3 +43,5 @@ Unsere Trauzeugen sind:
 Renate Hodel, Tel. 079 307 10 39
 
 Christian Joss, Tel. 078 885 63 63
+
+Wir freuen uns auf ein wunderschönes Fest!
