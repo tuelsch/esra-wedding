@@ -12,11 +12,7 @@ Apéro in der Festbühne Würzbrunnen (direkt neben der Kirche)
 
 ###### ab 18:00
 
-Abendessen und Übernachtung im Hotel Restaurant Hirschen Eggiwil
-
-###### ab 23:00
-
-Party
+Abendessen, Party und Übernachtung im Hotel Restaurant Hirschen Eggiwil
 
 ### Sonntag, 21. Juni 2020
 
@@ -26,17 +22,17 @@ Frühstück im Hotel Restaurant Hirschen Eggiwil
 
 ### Infos
 
-Bei der Kirche und bei der Festbühne Würzbrunnen stehen einige Parkplätze zur Verfügung.
+Bei der Kirche und bei der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung.
 
-Mit den Kindern feiern wir sehr gerne bis zum Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen Abendessen und Party unter Erwachsenen.
+Mit den Kindern feiern wir sehr gerne bis zum Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen das Abendessen und die Party unter Erwachsenen.
 
-Falls ihr übernachten möchtet, laden wir euch gerne dazu ein. Das Check-in im Hotel Hirschen ist ab Samstagmittag möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden. Vom Hotel Hirschen zur Kirche Würzbrunnen sind es ungefähr 10 Minuten mit dem Auto.
+Falls ihr übernachten möchtet, laden wir euch gerne dazu ein. Das Check-in im Hotel Hirschen ist am Samstag ab 12 Uhr möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden. Vom Hotel Hirschen zur Kirche Würzbrunnen sind es ungefähr 10 Minuten mit dem Auto.
 
 Adresse Hotel Restaurant Hirschen: Heidbühl 471, 3537 Eggiwil
 
 Dresscode: festlich, elegant, sommerlich, schick, ... so, wie ihr euch wohlfühlt!
 
-Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wir freuen uns sehr, mit euch zu feiern! Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN CH73 0023 5235 2606 3440 U).
+Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN CH73 0023 5235 2606 3440 U).
 
 Unsere Trauzeugen sind:
 
