@@ -12,6 +12,8 @@ Apéro in der Festbühne Würzbrunnen (direkt neben der Kirche)
 
 ### Infos
 
+Bei der Kirche und bei der Festbühne Würzbrunnen stehen einige Parkplätze zur Verfügung.
+
 Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wir freuen uns sehr, mit euch zu feiern! Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN  )
 
 Unsere Trauzeugen sind:
