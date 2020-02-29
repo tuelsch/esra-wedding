@@ -2,14 +2,22 @@
   <div>
     <g-image class="esra-img" src="/img/esra.jpg"></g-image>
     <div class="thx rsvp-container">
-      <h3>Anmeldung erfolgreich!!</h3>
-      <p>Vielen Dank für deine Anmeldung, sie wurde erfolgreich gespeichert.</p>
+      <div v-html="$static.rsvp.content"></div>
       <p class="align-center">
-        <button class="link" @click="showRsvp">Zusätzliche Anmeldung ausfüllen</button>
+        <button class="link" @click="showRsvp">{{ $static.rsvp.add_invite }}</button>
       </p>
     </div>
   </div>
 </template>
+
+<static-query>
+  query {
+    rsvp:netlifyPages(path:"/src/admin/content/rsvp-thx") {
+      content,
+      add_invite
+    }
+  }
+</static-query>
 
 <script>
 import { mapMutations } from "vuex";
