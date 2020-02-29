@@ -18,5 +18,6 @@ Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben
 
 Unsere Trauzeugen sind:
 
-* Renate Hodel, Tel. 079 307 10 39
-* Christian Joss, Tel. 078 885 63 63
+Renate Hodel, Tel. 079 307 10 39
+
+Christian Joss, Tel. 078 885 63 63
