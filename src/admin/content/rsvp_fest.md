@@ -9,11 +9,11 @@ fest: Abendessen (ohne Kinder)
 fest_error: Nimmst du am Abendessen teil?
 night: Übernachtung mit Frühstück
 night_error: Möchtest du im Hirschen übernachten?
-comments: 'Bemerkungen, Allergien, vegetarisch, etc.'
+comments: 'Bemerkungen, Allergien, Vegetarier, etc.'
 add_person: Gast hinzufügen
 ---
 ## Anmeldung
 
-Wir freuen uns sehr über eure Anmeldung!
+Wir freuen uns sehr über eure Anmeldungen!
 
 Bitte alle Gäste einzeln eintragen.
