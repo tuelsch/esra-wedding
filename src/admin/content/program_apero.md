@@ -12,7 +12,7 @@ Apéro in der Festbühne Würzbrunnen (direkt neben der Kirche)
 
 ### Infos
 
-Bei der Kirche und bei der Festbühne Würzbrunnen stehen einige Parkplätze zur Verfügung.
+Bei der Kirche und der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung.
 
 Dresscode: festlich, elegant, sommerlich, schick, ... so wie ihr euch wohlfühlt!
 
