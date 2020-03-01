@@ -10,7 +10,7 @@ Trauung in der Kirche Würzbrunnen
 
 Apéro in der Festbühne Würzbrunnen (direkt neben der Kirche)
 
-###### ab 18.00 Uhr
+###### ab 18.30 Uhr
 
 Abendessen, Party und Übernachtung im Hotel Restaurant Hirschen Eggiwil
 
