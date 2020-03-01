@@ -2,11 +2,11 @@
 
 ### Samstag, 20. Juni 2020
 
-###### 14:00 - 15:00
+###### 14.00 - 15.00 Uhr
 
 Trauung in der Kirche Würzbrunnen
 
-###### 15:00 - 17:30
+###### 15.00 - 17.30 Uhr
 
 Apéro in der Festbühne Würzbrunnen (direkt neben der Kirche)
 
