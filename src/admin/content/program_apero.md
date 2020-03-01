@@ -16,7 +16,7 @@ Bei der Kirche und der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung
 
 Dresscode: festlich, elegant, sommerlich, schick, ... so wie ihr euch wohlfühlt!
 
-Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wir freuen uns sehr, mit euch zu feiern! Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN CH73 0023 5235 2606 3440 U).
+Das wertvollste Geschenk ist eure Anwesenheit am schönsten Tag in unserem Leben. Wer uns sonst noch eine Freude machen möchte, kann sich gerne bei unseren Trauzeugen erkunden oder an unsere Hochzeitsreise beisteuern (IBAN CH73 0023 5235 2606 3440 U).
 
 Unsere Trauzeugen sind:
 
