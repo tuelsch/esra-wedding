@@ -24,7 +24,7 @@ Frühstück im Hotel Restaurant Hirschen Eggiwil
 
 Bei der Kirche und der Festbühne Würzbrunnen stehen Parkplätze zur Verfügung.
 
-Mit den Kindern feiern wir sehr gerne bis zum Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen das Abendessen und die Party unter Erwachsenen.
+Mit den Kindern feiern wir sehr gerne bis und mit Apéro. Anschliessend gönnen wir den Eltern eine Pause und geniessen das Abendessen und die Party unter Erwachsenen.
 
 Falls ihr übernachten möchtet, laden wir euch gerne dazu ein. Das Check-in im Hotel Hirschen ist am Samstag ab 12.00 Uhr möglich. Ihr könnt gerne schon vor der kirchlichen Trauung einchecken und allenfalls Fahrgemeinschaften zur Kirche bilden oder auch erst vor dem Abendessen. Vom Hotel Hirschen zur Kirche Würzbrunnen sind es ungefähr 10 Minuten mit dem Auto.
 
