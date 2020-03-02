@@ -19,7 +19,7 @@ const sheets = google.sheets("v4");
 
 const spreadsheetId = "1pQ7hh9OKpAy6elcZePu2yQl1UNsk4aRk_FW83ZPRi44";
 
-const serviceAccount = require("../serviceAccount.json");
+const serviceAccount = require("../credentials.json");
 
 const jwtClient = new google.auth.JWT({
   email: serviceAccount.client_email,
@@ -37,18 +37,69 @@ type Apero = {
   lastname: string;
 };
 
-export const copyScoresToSheet = functions.database
-  .ref("/apero")
-  .onUpdate(async change => {
-    const data: Apero = change.after.val();
+type Fest = {
+  familyId: string;
+  firstname: string;
+  lastname: string;
+  apero: boolean;
+  fest: boolean;
+  night: boolean;
+  comments: string;
+  date: number;
+};
 
-    await jwtAuthPromise;
-    await sheets.spreadsheets.values.append(
-      {
+export const copyFestToSheet = functions.database
+  .ref("/fest/{id}")
+  .onCreate(async change => {
+    const rsvp = change.val();
+    const data: Fest[] = rsvp.persons.map(
+      (person: any): Fest => {
+        person.familyId = rsvp.id;
+        person.date = rsvp.date;
+        return person;
+      }
+    );
+    const payload = data.map(person => {
+      return [
+        person.familyId,
+        person.firstname,
+        person.lastname,
+        person.apero,
+        person.fest,
+        person.night,
+        person.comments,
+        person.date
+      ];
+    });
+    console.log(JSON.stringify(payload));
+
+    try {
+      await jwtAuthPromise;
+      await sheets.spreadsheets.values.append({
         auth: jwtClient,
         spreadsheetId: spreadsheetId,
-        range: "Apero!A1:F1", // update this range of cells
+        range: "Fest!A:H", // update this range of cells
         valueInputOption: "RAW",
+        insertDataOption: "INSERT_ROWS",
+        requestBody: {
+          values: payload
+        }
+      });
+    } catch (error) {}
+  });
+
+export const copyScoresToSheet = functions.database
+  .ref("/apero/{id}")
+  .onCreate(async change => {
+    const data: Apero = change.val();
+    try {
+      await jwtAuthPromise;
+      await sheets.spreadsheets.values.append({
+        auth: jwtClient,
+        spreadsheetId: spreadsheetId,
+        range: "Apero!A:F", // update this range of cells
+        valueInputOption: "RAW",
+        insertDataOption: "INSERT_ROWS",
         requestBody: {
           values: [
             [
@@ -61,7 +112,8 @@ export const copyScoresToSheet = functions.database
             ]
           ]
         }
-      },
-      {}
-    );
+      });
+    } catch (error) {
+      console.error(error);
+    }
   });
