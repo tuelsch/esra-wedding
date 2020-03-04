@@ -54,8 +54,8 @@ export const copyFestToSheet = functions.database
     const rsvp = change.val();
     const data: Fest[] = rsvp.persons.map(
       (person: any): Fest => {
-        person.familyId = rsvp.id;
-        person.date = rsvp.date;
+        person.familyId = change.key;
+        person.date = rsvp.created;
         return person;
       }
     );
@@ -71,7 +71,6 @@ export const copyFestToSheet = functions.database
         person.date
       ];
     });
-    console.log(JSON.stringify(payload));
 
     try {
       await jwtAuthPromise;
@@ -79,13 +78,15 @@ export const copyFestToSheet = functions.database
         auth: jwtClient,
         spreadsheetId: spreadsheetId,
         range: "Fest!A:H", // update this range of cells
-        valueInputOption: "RAW",
+        valueInputOption: "USER_ENTERED",
         insertDataOption: "INSERT_ROWS",
         requestBody: {
           values: payload
         }
       });
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
   });
 
 export const copyScoresToSheet = functions.database
@@ -97,8 +98,8 @@ export const copyScoresToSheet = functions.database
       await sheets.spreadsheets.values.append({
         auth: jwtClient,
         spreadsheetId: spreadsheetId,
-        range: "Apero!A:F", // update this range of cells
-        valueInputOption: "RAW",
+        range: "Apero!A:H", // update this range of cells
+        valueInputOption: "USER_ENTERED",
         insertDataOption: "INSERT_ROWS",
         requestBody: {
           values: [
