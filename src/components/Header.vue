@@ -1,11 +1,13 @@
 <template>
   <header class="header">
-    <p class="h3">{{ $static.home.title }}</p>
+    <div>
+      <h1 class="h3">{{ $static.home.title }}</h1>
+      <button class="navigation-toggler blank" @click="openNav">
+        <span></span>
+        <span class="sr-only">Navigation öffnen</span>
+      </button>
+    </div>
     <time class="h5">{{ $static.home.date }}</time>
-    <button class="navigation-toggler blank" @click="openNav">
-      <span></span>
-      <span class="sr-only">Navigation öffnen</span>
-    </button>
   </header>
 </template>
 
@@ -36,7 +38,7 @@ export default {
   padding: 1em 0;
 
   @include max($xxs) {
-    --base: 12px;
+    --base: 10px;
   }
 
   @include max($xs) {
@@ -44,7 +46,12 @@ export default {
     z-index: 2;
   }
 
-  p {
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
     margin: 0 auto;
 
     @include min($xs) {
@@ -87,7 +94,9 @@ export default {
   }
 
   @include max($xxs) {
-    right: 1rem;
+    top: 1.3rem;
+    right: 0.5rem;
+    // width: 1.5rem;
   }
 
   &:before,
@@ -99,6 +108,14 @@ export default {
     height: 3px;
     margin: 9px 0;
     transition: all 0.2s ease-in-out;
+  }
+
+  &:before {
+    margin-top: 0;
+  }
+
+  &:after {
+    margin-bottom: 0;
   }
 
   .navigation-open & {
