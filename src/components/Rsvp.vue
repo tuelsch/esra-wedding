@@ -1,8 +1,9 @@
 <template>
   <section id="section-rsvp" class="container">
-    <rsvp-apero v-show="!rsvpSent && mode === EMode.Apero" />
+    <!-- <rsvp-apero v-show="!rsvpSent && mode === EMode.Apero" />
     <rsvp-fest v-show="!rsvpSent && mode === EMode.Fest" />
-    <thx-for-rsvp v-show="rsvpSent" />
+    <thx-for-rsvp v-show="rsvpSent" />-->
+    <info />
   </section>
 </template>
 
@@ -10,6 +11,7 @@
 import RsvpApero from "@/components/RSVP-Apero";
 import ThxForRsvp from "@/components/ThxForRsvp";
 import RsvpFest from "@/components/RSVP-Fest";
+import Info from "@/components/Info";
 import EMode from "@/modules/EMode";
 import { mapState } from "vuex";
 
@@ -17,7 +19,8 @@ export default {
   components: {
     RsvpApero,
     ThxForRsvp,
-    RsvpFest
+    RsvpFest,
+    Info
   },
   data() {
     return {
@@ -41,7 +44,8 @@ export default {
   padding: 2rem;
   margin: 1rem auto;
 
-  & > div {
+  & > div,
+  & {
     > h1,
     > h2,
     > h3,
