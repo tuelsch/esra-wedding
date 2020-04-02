@@ -24,6 +24,11 @@ collections:
             }
           - { label: Apéro Passwort, name: apero_pw, widget: string }
           - { label: Fest Passwort, name: fest_pw, widget: string }
+      - label: Info
+        name: info
+        file: src/admin/content/info.md
+        fields:
+          - { label: Infos, name: body, widget: markdown }
       - label: Meta Infos
         name: meta
         file: src/admin/content/meta.md
